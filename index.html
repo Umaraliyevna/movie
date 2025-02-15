@@ -4,8 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
-    
+    <div class="movies-carusel" id="movies-carusel">
+        <div class="container">
+            <div class="">
+                <div class="trend flex">
+                    <h2 class="title">В тренде</h2>
+                    <div class="button-group">
+                        <button class="btn-movie active" onclick="changeBtn(this,'btn-movie')">Сегодня</button>
+                        <button class="btn-movie" onclick="changeBtn(this,'btn-movie')">На этой неделе</button>
+                    </div>
+                </div>
+                <div id="movie-list" class="movie-list flex"></div>
+            </div>
+        </div>
+    </div>
+    <div class="videos-carusel" >
+        <div class="shadow">
+            <div class="container">
+                <div class="trend flex">
+                    <h2 class="title video-title">Последние трейлеры</h2>
+                    <div class="button-group vidoe">
+                        <button class="btn-video active" onclick="changeBtn(this,'btn-video')">Popular</button>
+                        <button class="btn-video" onclick="changeBtn(this,'btn-video')">В кинотеатрах</button>
+                    </div>
+                </div>
+                <div id="video-list" class="video-list"></div>
+            </div>
+        </div>
+    </div>
+    <div class="movies-carusel-2">
+        <div class="container">
+            <div class="">
+                <div class="trend flex">
+                    <h2 class="title">Что популярно</h2>
+                    <div class="button-group">
+                        <button id="text-none" class="btn-movie active" onclick="changeBtn(this,'btn-movie')">В кинотеатрах</button>
+                    </div>
+                </div>
+                <div id="movie-list-2" class="movie-list flex"></div>
+            </div>
+        </div>
+    </div>
+   
+    <footer id="footer" class="footer">
+        <div class="container flex">
+            <div class="footer-brand">
+                <img id="brand" src="images/brend.svg" alt="">
+                <button class="footer-btn">Вступить в сообщество</button>
+            </div>
+            <div class="sections">
+                <h2>Главное</h2>
+                <a href="">О TMDB</a>
+                <a href="">Связаться с нами</a>
+                <a href="">Форумы поддержки</a>
+                <a href="">API</a>
+                <a href="">Статус системы</a>
+            </div>
+            <div class="sections">
+                <h2>Участвуйте</h2>
+                <a href="">Библия редакторов</a>
+                <a href="">Добавить новый фильм</a>
+                <a href="">Добавить новый сериал</a>
+            </div>
+            <div class="sections">
+                <h2>Сообщество</h2>
+                <a href="">Руководства</a>
+                <a href="">Обсуждения</a>
+                <a href="">Доска почёта</a>
+            </div>
+            <div class="sections">
+                <h2>О праве</h2>
+                <a href="">РУсловия использования</a>
+                <a href="">API Правила использования</a>
+                <a href="">Политика конфиденциальности</a>
+                <a href="">DMCA Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
