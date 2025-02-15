@@ -1,0 +1,168 @@
+.movie-info{
+    width: 100%;
+    height: 510px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#movie-info-img{
+    flex: 1;
+    width: 300px;
+    height: 450px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+#img-info{
+    flex: 2;
+}
+
+.movie-name{
+    color: white;
+    padding-left: 50px;
+    padding-top: 40px;
+    margin: 0;
+}
+
+.paddingLeft{    
+    padding-left: 40px;
+}
+
+.year{
+    color: rgba(255, 255, 255, 0.641);
+    font-weight: 400;
+    margin-left: 10px;
+}
+.date{
+    color: white;
+}
+
+.info-four{
+    height: 20px;
+    align-items: center;
+    margin-top: 5px;
+    padding-left: 50px;    
+}
+
+.certification{
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    align-items: center;
+    border: 2px solid rgba(65, 62, 62, 0.781);
+    border-radius: 3px;
+}
+
+.certification p{
+    margin-top: 2px;
+}
+
+.info-three{
+    height: 20px;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.rating {
+    width: 70px;
+    height: 70px;
+}
+
+.reyting{
+    margin-left: 90px;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.button {
+    width: 165px;
+    height: 34px;
+    background-color: #03243F;
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: -15px 0 0 15px;
+}
+
+.link{
+    border-bottom: 3px solid #01B4E4;
+    margin-left: 4px;
+}
+
+.button .i{
+    width: 15px;
+    height: 15px;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: white;
+    color: #03243F;
+    font-style: italic;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.add-info{
+    width: 50px;
+    height: 50px;
+    background-color: #03243F;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.add-info i{
+    color: white;
+    margin-top: 17px;
+}
+
+.info-treiler{
+    padding-left: 20px;
+    display: flex;
+    width: 250px;
+    height: 20px;
+    align-items: center;
+}
+
+.info-treiler p{
+    font-weight: bold;
+    color: white;
+}
+
+#info-player{
+    font-size: 1.8rem;
+    color: white;
+}
+
+.obzor i{
+    padding-left: 60px;
+    display: block;
+    color: rgba(255, 255, 255, 0.595);
+    margin-top: 30px;
+}
+
+.obzor h2{
+    padding-left: 60px;
+    margin-top: 5px;
+}
+
+.obzor p{
+    padding-left: 60px;
+}
+
+.dot{
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    border-radius: 50%;
+}
