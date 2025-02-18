@@ -19,7 +19,6 @@ function displayCard(listName) {
   fetch(url, options)
     .then((res) => res.json())
     .then((json) => {
-      console.log(json);
       json.results.forEach((movie) => {
         listName.innerHTML += `
           <div class='card'>

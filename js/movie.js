@@ -169,7 +169,7 @@ fetch(url3, options3)
     .then(res => res.json())
     .then(json => {
         console.log(json)
-        json.backdrops.forEach((item)=>{
+            json.backdrops.forEach((item)=>{
             popularVideo.innerHTML +=`
                 <img src='https://media.themoviedb.org/t/p/w220_and_h330_face${item.file_path}'>
             `
