@@ -27,8 +27,8 @@ function displayCard(listName) {
               <a href='movie.html?movie=${
                 movie.id
               }' style='text-decoration:none;'><img id='card-img' src='https://media.themoviedb.org/t/p/w220_and_h330_face${
-          movie.poster_path
-        }' alt="${movie.original_title}"></a>
+                movie.poster_path
+              }' alt="${movie.original_title}"></a>
               <div class="circular-progress">
                   <span class="percentage">${Math.floor(
                     movie.popularity
@@ -133,3 +133,5 @@ function bigImg(x, url) {
 function normalImg(x) {
   x.style.transform = "scale(1)";
 }
+
+
