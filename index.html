@@ -12,63 +12,66 @@
     />
   </head>
   <body>
-    <header class="header">
-      <div class="BigHeader">
-        <div class="logo">
-          <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
-        </div>
-        <nav class="nav-menu">
-          <ul>
-            <li>
-              <a href="#" class="smoothScroll">Фильмы</a>
-              <div class="dropDown">
-                <ul>
-                  <li><a href="#">Популярные</a></li>
-                  <li><a href="#">Смотрят сейчас</a></li>
-                  <li><a href="#">Ожидаемые</a></li>
-                  <li><a href="#">Лучшие</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#" class="smoothScroll">Сериалы</a>
-              <div class="dropDown1">
-                <ul>
-                  <li><a href="#">Популярные</a></li>
-                  <li><a href="#">Смотрят сейчас</a></li>
-                  <li><a href="#">Ожидаемые</a></li>
-                  <li><a href="#">Лучшие</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#" class="smoothScroll">Люди</a>
-              <div class="dropDown2">
-                <ul>
-                  <li><a href="#">Популярные Люди</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#" class="smoothScroll">Ещё</a>
-              <div class="dropDown3">
-                <ul>
-                  <li><a href="#">Обсуждения</a></li>
-                  <li><a href="#">Доска почёта</a></li>
-                  <li><a href="#">Поддержка</a></li>
-                  <li><a href="#">API</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-        <div class="header-right">
-          <img src="images/header-images/plusLogo.svg" alt="Plus" />
-          <div class="switch-lang">RU</div>
-          <ul>
-            <li><a href="#">Войти</a></li>
-            <li><a href="#">Присоединиться к TMDB</a></li>
-          </ul>
+    <header>
+      <div class="container">
+        <div class="BigHeader">
+          <div class="logo">
+            <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
+          </div>
+          <nav class="nav-menu">
+            <ul>
+              <li>
+                <a href="#" class="smoothScroll">Фильмы</a>
+                <div class="dropDown">
+                  <ul>
+                    <li><a href="#">Популярные</a></li>
+                    <li><a href="#">Смотрят сейчас</a></li>
+                    <li><a href="#">Ожидаемые</a></li>
+                    <li><a href="#">Лучшие</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="smoothScroll">Сериалы</a>
+                <div class="dropDown1">
+                  <ul>
+                    <li><a href="#">Популярные</a></li>
+                    <li><a href="#">Смотрят сейчас</a></li>
+                    <li><a href="#">Ожидаемые</a></li>
+                    <li><a href="#">Лучшие</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="smoothScroll">Люди</a>
+                <div class="dropDown2">
+                  <ul>
+                    <li><a href="#">Популярные Люди</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="smoothScroll">Ещё</a>
+                <div class="dropDown3">
+                  <ul>
+                    <li><a href="#">Обсуждения</a></li>
+                    <li><a href="#">Доска почёта</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="#">API</a></li>
+                  </ul>
+                </div>
+               
+              </li>
+            </ul>
+          </nav>
+          <div class="header-right">
+            <img src="images/header-images/plusLogo.svg" alt="Plus" />
+            <div class="switch-lang">RU</div>
+            <ul>
+              <li><a href="#">Войти</a></li>
+              <li><a href="#">Присоединиться к TMDB</a></li>
+            </ul>
+         
 
           <img src="images/header-images/searchIcon.svg" alt="Search" />
         </div>
@@ -78,18 +81,16 @@
       <img src="images/header-images/searchIcon.svg" class="search-icon" />
       <input type="text" placeholder="Найти фильм, сериал, персону..." />
     </div>
+
     <div class="homeMenu">
-      <div class="writers">
-        <h1>That's a <br />Wrap 2025</h1>
-        <h3>The best (and worst) of the year from TMDB.</h3>
-        <button>Check it out...</button>
-      </div>
-      <div class="Images">
-        <img src="images/header-images/Menu_img1.jpg" alt="Img1" />
-        <img src="images/header-images/Menu_img2.jpg" alt="Img2" />
-        <img src="images/header-images/Menu_img3.jpg" alt="Img3" />
-        <img src="images/header-images/Menu_img4.jpg" alt="Img4" />
-        <img src="images/header-images/Menu_img5.jpg" alt="Img5" />
+      <div class="shadow">
+        <div class="container">
+          <div class="writers">
+            <h1>That's a <br />Wrap 2025</h1>
+            <h3>The best (and worst) of the year from TMDB.</h3>
+            <button>Check it out...</button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="movies-carusel" id="movies-carusel">
@@ -157,15 +158,17 @@
       <div class="bannerImg">
         <img src="images/BannerBgImg.jpg" alt="Banner Img" />
       </div>
-      <div class="bannerWriters">
-        <h2>Присоединяйтесь сегодня</h2>
-        <p>
-          Get access to maintain your own custom personal lists track what
-          you've seen and search and filter for what to watch next —regardless
-          if it's in<br />
-          theatres or on TV.
-        </p>
-        <button>Зарегистрироваться</button>
+      <div class="container">
+        <div class="bannerWriters">
+          <h2>Присоединяйтесь сегодня</h2>
+          <p>
+            Get access to maintain your own custom personal lists track what
+            you've seen and search and filter for what to watch next —regardless
+            if it's in<br />
+            theatres or on TV.
+          </p>
+          <button>Зарегистрироваться</button>
+        </div>
       </div>
     </div>
     <div class="listOfPeople">
