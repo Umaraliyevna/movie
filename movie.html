@@ -4,14 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/movie.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/movie.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <div class="BigHeader">
+            <div class="logo">
+              <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
+            </div>
+            <nav class="nav-menu">
+              <ul>
+                <li>
+                  <a href="#" class="smoothScroll">Фильмы</a>
+                  <div class="dropDown">
+                    <ul>
+                      <li><a href="#">Популярные</a></li>
+                      <li><a href="#">Смотрят сейчас</a></li>
+                      <li><a href="#">Ожидаемые</a></li>
+                      <li><a href="#">Лучшие</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#" class="smoothScroll">Сериалы</a>
+                  <div class="dropDown1">
+                    <ul>
+                      <li><a href="#">Популярные</a></li>
+                      <li><a href="#">Смотрят сейчас</a></li>
+                      <li><a href="#">Ожидаемые</a></li>
+                      <li><a href="#">Лучшие</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#" class="smoothScroll">Люди</a>
+                  <div class="dropDown2">
+                    <ul>
+                      <li><a href="#">Популярные Люди</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#" class="smoothScroll">Ещё</a>
+                  <div class="dropDown3">
+                    <ul>
+                      <li><a href="#">Обсуждения</a></li>
+                      <li><a href="#">Доска почёта</a></li>
+                      <li><a href="#">Поддержка</a></li>
+                      <li><a href="#">API</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+            <div class="header-right">
+              <img src="images/header-images/plusLogo.svg" alt="Plus" />
+              <div class="switch-lang">RU</div>
+              <ul>
+                <li><a href="#">Войти</a></li>
+                <li><a href="#">Присоединиться к TMDB</a></li>
+              </ul>
+    
+              <img src="images/header-images/searchIcon.svg" alt="Search" />
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="search-box container">
+        <img src="images/header-images/searchIcon.svg" class="search-icon" />
+        <input type="text" placeholder="Найти фильм, сериал, персону..." />
+      </div>
     <div class="movie-info" id="movie-info">
       <div class="shadow">
         <div class="container">
@@ -20,23 +86,102 @@
       </div>
     </div>
     <div class="role-section" id="role-section">
-      <div class="container">
-        <div class="actors-info" id="actors-info">
-          <h2>В главных ролях</h2>
-          <div class="actors-card"></div>
-          <p>Полный актёрский и съёмочный состав</p>
-          <hr />
-          <div>
-            <h2>Социальные сети</h2>
-            <div>Рецензии <span>0</span></div>
-            <div>Обсуждения <span>0</span></div>
-          </div>
-          <p></p>
+        <div class="container">
+            <div class="actors-info">
+                <div class="actors" id="actors">
+                    <h2>В главных ролях</h2>
+                    <div class="actors-card" id="actors-card"></div>
+                    <p class="coctav">Полный актёрский и съёмочный состав</p>
+                    <hr>
+                    <div class="сети">
+                        <h2>Социальные <br> сети</h2>
+                        <div>
+                            <a class="comment active" onclick="socialMedia(this,'comment')">Рецензии <span>0</span></a>
+                            <a class="comment discussion" onclick="socialMedia(this,'comment')">Обсуждения  <span>7</span></a>
+                        </div>
+                    </div>
+                    <div id="comment">
+                        <p id="comment">Рецензий на Капитан Америка: Новый Мир нет. Не желаете ли Вы написать одну?</p>
+                    </div>
+                    <div id="discussion">
+                        <div id="discuss">
+                            <div class="flex">
+                                <img src="images/comment.jpg" alt="">
+                                <a href="">Is this going to <br> make $</a>
+                            </div>
+                            <div class="data enter">
+                                <p>Открыто</p>
+                            </div>
+                            <div class="data">
+                                <p>6</p>
+                            </div>
+                            <div class="flex data">                                
+                                <p>15 фев 2025 в 18:36 <br>от Adam</p>
+                            </div>
+                        </div>
+                        <p>К обсуждениям</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="flex">
+                            <h2>Медиа</h2>
+                            <div class="videorolik-section flex">
+                                <p class="active">Самое популярное</p>
+                                <p>Видеоролики <span>1</span></p>
+                                <p>Задники <span>51</span></p>
+                                <p>Постеры <span>205</span></p>
+                            </div>
+                        </div>
+                        <div class="popular-video" id="popular-video">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="status">
+                    gfds
+                </div>
+            </div>
         </div>
         <div class="status"></div>
       </div>
     </div>
 
+    <footer id="footer" class="footer">
+        <div class="container flex">
+            <div class="footer-brand">
+                <img id="brand" src="images/brend.svg" alt="">
+                <button class="footer-btn">Вступить в сообщество</button>
+            </div>
+            <div class="sections">
+                <h2>Главное</h2>
+                <a href="">О TMDB</a>
+                <a href="">Связаться с нами</a>
+                <a href="">Форумы поддержки</a>
+                <a href="">API</a>
+                <a href="">Статус системы</a>
+            </div>
+            <div class="sections">
+                <h2>Участвуйте</h2>
+                <a href="">Библия редакторов</a>
+                <a href="">Добавить новый фильм</a>
+                <a href="">Добавить новый сериал</a>
+            </div>
+            <div class="sections">
+                <h2>Сообщество</h2>
+                <a href="">Руководства</a>
+                <a href="">Обсуждения</a>
+                <a href="">Доска почёта</a>
+            </div>
+            <div class="sections">
+                <h2>О праве</h2>
+                <a href="">РУсловия использования</a>
+                <a href="">API Правила использования</a>
+                <a href="">Политика конфиденциальности</a>
+                <a href="">DMCA Policy</a>
+            </div>
+        </div>
+    </footer>
+    
     <script src="js/movie.js"></script>
   </body>
 </html>

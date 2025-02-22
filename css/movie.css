@@ -1,3 +1,4 @@
+/* movie-info */
 .movie-info{
     width: 100%;
     height: 510px;
@@ -36,6 +37,7 @@
 }
 .date{
     color: white;
+    margin: 0 5px 0 0; 
 }
 
 .info-four{
@@ -45,17 +47,15 @@
     padding-left: 50px;    
 }
 
-.certification{
-    width: 30px;
-    height: 20px;
-    text-align: center;
-    align-items: center;
-    border: 2px solid rgba(65, 62, 62, 0.781);
-    border-radius: 3px;
+.info-four .certification{
+   margin: 0 5px 0 0;   
 }
 
 .certification p{
-    margin-top: 2px;
+    margin-top: 15px;
+    padding: 3px;
+    border: 2px solid rgba(65, 62, 62, 0.781);
+    border-radius: 3px;
 }
 
 .info-three{
@@ -132,6 +132,7 @@
     width: 250px;
     height: 20px;
     align-items: center;
+    margin-top: 5px;
 }
 
 .info-treiler p{
@@ -161,8 +162,183 @@
 }
 
 .dot{
+    margin: 0 5px 0 0; 
     width: 7px;
     height: 7px;
     background-color: white;
     border-radius: 50%;
 }
+
+/* role-section*/
+.actors-info{
+    display: flex;
+}
+
+.actors{
+    position: relative;
+    flex: 2;
+    width: 70%;
+}
+
+.status{
+    z-index: 10;
+    margin-top: 25px;
+    flex: .5;
+    box-shadow: -40px 0px 19px 16px rgba(255, 255, 255, 0.779);
+}
+
+.actors-card{
+    display: flex;
+    gap: 16px; 
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+}
+.actors-card::-webkit-scrollbar{
+    height: 8px; 
+}
+
+.actors-card::-webkit-scrollbar-thumb{
+    background-color: #44444454;
+    border-radius: 4px; 
+}
+
+.actors-card div{
+    position: relative;
+    margin: 0 4px 10px 0px;
+    width: 140px;
+    height: 280px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(var(--lightGrey), 1);
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.actor-img{
+    width: 138px;
+    height: 175px;    
+    border-radius: 10px;
+}
+
+.actor-name{
+    font-weight: 700;
+    color: #000;
+    font-size: 1em;
+    padding: 10px 0 0 10px;
+    margin: 0;
+}
+
+.character{
+    font-size: .9em;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: 400;
+}
+
+.again{
+    font-weight: bold;
+    font-size: .9em;
+    height: 100px;
+    margin: auto 10px;
+}
+
+#right{
+    font-weight: bold;
+    font-size: 1.9em;
+    height: 100px;
+    margin: auto 10px;
+    color: #000;
+    z-index: 100;
+}
+
+.actors .coctav{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.сети{
+    display: flex;
+
+}
+
+.сети h2{
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+.сети div{
+    margin-left: 30px;
+    margin-top: 25px;
+}
+.сети a{
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.сети a.active{
+    border-bottom: 4px solid black;
+}
+
+.сети a span{
+    align-items: center;
+    opacity: .6;
+    font-weight: 600;
+}
+
+#discuss{
+    height: 62px;
+    display: flex;
+    width: 92%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+}
+
+#discuss img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#discuss a{
+    font-size: 1em;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+#discuss .data{
+    font-size: .95em;
+    font-weight: 300;
+    color: #0000009f;
+    text-align: right;
+}
+
+.enter{
+    margin-left: 250px;
+}
+
+.videorolik-section{
+    margin-left: 20px;
+}
+
+.videorolik-section p.active{
+    border-bottom: 4px solid black;
+}
+
+.videorolik-section p{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 7px;
+    padding-left: 15px;
+}
+
+.videorolik-section p span{
+    color: #0000007f;
+    margin-left: 2px;
+}
+
