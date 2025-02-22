@@ -13,71 +13,69 @@
   </head>
   <body>
     <header class="header">
-      <div class="BigHeader">
-        <div class="logo">
-          <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
-        </div>
-        <nav class="nav-menu">
-          <ul>
-            <li>
-              <a href="#" class="smoothScroll">Фильмы</a>
-              <div class="dropDown">
-                <ul>
-                  <li><a href="#">Популярные</a></li>
-                  <li><a href="#">Смотрят сейчас</a></li>
-                  <li><a href="#">Ожидаемые</a></li>
-                  <li><a href="#">Лучшие</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#" class="smoothScroll">Сериалы</a>
-              <div class="dropDown1">
-                <ul>
-                  <li><a href="#">Популярные</a></li>
-                  <li><a href="#">Смотрят сейчас</a></li>
-                  <li><a href="#">Ожидаемые</a></li>
-                  <li><a href="#">Лучшие</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#" class="smoothScroll">Люди</a>
-              <div class="dropDown2">
-                <ul>
-                  <li><a href="#">Популярные Люди</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#" class="smoothScroll">Ещё</a>
-              <div class="dropDown3">
-                <ul>
-                  <li><a href="#">Обсуждения</a></li>
-                  <li><a href="#">Доска почёта</a></li>
-                  <li><a href="#">Поддержка</a></li>
-                  <li><a href="#">API</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-        <div class="header-right">
-          <img src="images/header-images/plusLogo.svg" alt="Plus" />
-          <div class="switch-lang">RU</div>
-          <ul>
-            <li><a href="#">Войти</a></li>
-            <li><a href="#">Присоединиться к TMDB</a></li>
-          </ul>
-
-          <img src="images/header-images/searchIcon.svg" alt="Search" />
+      <div class="container">
+        <div class="BigHeader">
+          <div class="logo">
+            <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
+          </div>
+          <nav class="nav-menu">
+            <ul>
+              <li>
+                <a href="#" class="smoothScroll">Фильмы</a>
+                <div class="dropDown">
+                  <ul>
+                    <li><a href="#">Популярные</a></li>
+                    <li><a href="#">Смотрят сейчас</a></li>
+                    <li><a href="#">Ожидаемые</a></li>
+                    <li><a href="#">Лучшие</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="smoothScroll">Сериалы</a>
+                <div class="dropDown1">
+                  <ul>
+                    <li><a href="#">Популярные</a></li>
+                    <li><a href="#">Смотрят сейчас</a></li>
+                    <li><a href="#">Ожидаемые</a></li>
+                    <li><a href="#">Лучшие</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="smoothScroll">Люди</a>
+                <div class="dropDown2">
+                  <ul>
+                    <li><a href="#">Популярные Люди</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="smoothScroll">Ещё</a>
+                <div class="dropDown3">
+                  <ul>
+                    <li><a href="#">Обсуждения</a></li>
+                    <li><a href="#">Доска почёта</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="#">API</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-right">
+            <img src="images/header-images/plusLogo.svg" alt="Plus" />
+            <div class="switch-lang">RU</div>
+            <ul>
+              <li><a href="#">Войти</a></li>
+              <li><a href="#">Присоединиться к TMDB</a></li>
+            </ul>
+  
+            <img src="images/header-images/searchIcon.svg" alt="Search" />
+          </div>
         </div>
       </div>
     </header>
-    <div class="search-box">
-      <img src="images/header-images/searchIcon.svg" class="search-icon" />
-      <input type="text" placeholder="Найти фильм, сериал, персону..." />
-    </div>
     <div class="homeMenu">
       <div class="writers">
         <h1>That's a <br />Wrap 2025</h1>
@@ -95,7 +93,7 @@
     <div class="movies-carusel" id="movies-carusel">
       <div class="container">
         <div class="">
-          <div class="trend flex">
+          <div class="trend">
             <h2 class="title">В тренде</h2>
             <div class="button-group">
               <button
@@ -116,7 +114,7 @@
     <div class="videos-carusel">
       <div class="shadow">
         <div class="container">
-          <div class="trend flex">
+          <div class="trend">
             <h2 class="title video-title">Последние трейлеры</h2>
             <div class="button-group vidoe">
               <button
@@ -139,7 +137,7 @@
         <div class="">
           <div class="trend flex">
             <h2 class="title">Что популярно</h2>
-            <div class="button-group">
+            <div class="video-btn">
               <button
                 id="text-none"
                 class="btn-movie active"
@@ -153,153 +151,225 @@
         </div>
       </div>
     </div>
-    <div class="banner">
-      <div class="bannerImg">
-        <img src="images/BannerBgImg.jpg" alt="Banner Img" />
-      </div>
-      <div class="bannerWriters">
-        <h2>Присоединяйтесь сегодня</h2>
-        <p>
-          Get access to maintain your own custom personal lists track what
-          you've seen and search and filter for what to watch next —regardless
-          if it's in<br />
-          theatres or on TV.
-        </p>
-        <button>Зарегистрироваться</button>
+    <div class="banner">     
+      <div class="shadow">
+        <div class="container">
+          <div class="bannerWriters">
+            <h2>Присоединяйтесь сегодня</h2>
+            <p>
+              Get access to maintain your own custom personal lists track what
+              you've seen and search and filter for what to watch next —regardless
+              if it's in<br />
+              theatres or on TV.
+            </p>
+            <button>Зарегистрироваться</button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="listOfPeople">
-      <div class="listWriters">
-        <h2>Доска почёта</h2>
-
-        <div class="BlueStick">
-          <div class="divBlue"></div>
-          <p>Правки за всё время</p>
+      <div class="container">
+        <div class="listWriters flex">
+          <h2>Доска почёта</h2>  
+          <div class="sticks">
+            <div class="BlueStick flex">
+              <div class="divBlue"></div>
+              <p>Правки за всё время</p>
+            </div>
+            <div class="RedStick flex">
+              <div class="divRed"></div>
+              <p>Правки за всё время</p>
+            </div>
+          </div>
         </div>
-        <div class="RedStick">
-          <div class="divRed"></div>
-          <p>Правки за всё время</p>
-        </div>
-      </div>
-
-      <div class="Peoples">
-        <div class="Shei">
-          <img src="images/Shei.jpg" alt="Shei" />
-          <h2>Shei</h2>
-          <div class="Shei_Green"></div>
-          <div class="Shei_Red"></div>
-          <p class="Shei_GreenOne">1,601,582</p>
-          <p class="Shei_GreenTwo">33,566</p>
-        </div>
-        <div class="Ceru">
-          <img src="images/Ceru.jpg" alt="Ceru" />
-          <h2>Ceru</h2>
-          <div class="Ceru_Green"></div>
-          <div class="Ceru_Red"></div>
-          <p class="Ceru_GreenOne">4,071,582</p>
-          <p class="Ceru_GreenTwo">6,132</p>
-        </div>
-        <div class="Capicorn">
-          <img src="images/Capicorn.png" alt="Capicorn" />
-          <h2>Capicorn</h2>
-          <div class="Capicorn_Green"></div>
-          <div class="Capicorn_Red"></div>
-          <p class="Capicorn_GreenOne">164,177</p>
-          <p class="Capicorn_GreenTwo">4,479</p>
-        </div>
-        <div class="Samara">
-          <img src="images/Samara.jpg" alt="Samara" />
-          <h2>Samara</h2>
-          <div class="Samara_Green"></div>
-          <div class="Samara_Red"></div>
-          <p class="Samara_GreenOne">1,601,582</p>
-          <p class="Samara_GreenTwo">33,566</p>
-        </div>
-        <div class="Qualitylover">
-          <img src="images/Ceru.jpg" alt="Qualitylover" />
-          <h2>Qualitylover</h2>
-          <div class="Qualitylover_Green"></div>
-          <div class="Qualitylover_Red"></div>
-          <p class="Qualitylover_GreenOne">727,582</p>
-          <p class="Qualitylover_GreenTwo">3,681</p>
-        </div>
-      </div>
-      <div class="Peoples2">
-        <div class="chkchkboom">
-          <img src="images/chkchkboom.jpg" alt="chkchkboom" />
-          <h2>chkchkboom</h2>
-          <div class="chkchkboom_Green"></div>
-          <div class="chkchkboom_Red"></div>
-          <p class="chkchkboom_GreenOne">83,495</p>
-          <p class="chkchkboom_GreenTwo">10,141</p>
-        </div>
-        <div class="Il_Cinepatica">
-          <img src="images/Il_Cinepatica.jpg" alt="Il_Cinepatica" />
-          <h2>Il_Cinepatica</h2>
-          <div class="Il_Cinepatica_Green"></div>
-          <div class="Il_Cinepatica_Red"></div>
-          <p class="Il_Cinepatica_GreenOne">165,199</p>
-          <p class="Il_Cinepatica_GreenTwo">5,497</p>
-        </div>
-        <div class="CXC600">
-          <img src="images/CXC600.jpg" alt="CXC600" />
-          <h2>CXC600</h2>
-          <div class="CXC600_Green"></div>
-          <div class="CXC600_Red"></div>
-          <p class="CXC600_GreenOne">222,273</p>
-          <p class="CXC600_GreenTwo">4,566</p>
-        </div>
-        <div class="ggalarza25">
-          <img src="images/ggalarza25.png" alt="ggalarza25" />
-          <h2>ggalarza25</h2>
-          <div class="ggalarza25_Green"></div>
-          <div class="ggalarza25_Red"></div>
-          <p class="ggalarza25_GreenOne">4,025</p>
-          <p class="ggalarza25_GreenTwo">4,566</p>
-        </div>
-        <div class="raze464">
-          <img src="images/raze464.jpg" alt="raze464" />
-          <h2>raze464</h2>
-          <div class="raze464_Green"></div>
-          <div class="raze464_Red"></div>
-          <p class="raze464_GreenOne">973,582</p>
-          <p class="raze464_GreenTwo">3,275</p>
+        <div class="peopleList">
+          <div class="Peoples">
+            <div class="person">
+              <img src="images/peopleList/Shei.jpg" alt="Shei" />         
+              <div class="person-rate">
+                <h2 class="person_name">Shei</h2>
+                <div class="greenOne">
+                  <div class="person_Green" style="--value: 201934;"></div>
+                  <p>1,619,346</p>
+                </div>
+                <div class="redOne">
+                  <div class="person_Red" style="--value: 16050;"></div>
+                  <p>16,050</p>
+                </div>
+                </div>
+            </div>
+            <div class="person flex">
+              <img src="images/peopleList/Ceru.jpg" alt="Ceru" />         
+              <div class="person-rate">
+                <h2 class="person_name">Ceru</h2>
+                <div class="greenOne flex">
+                  <div class="person_Green" style="--value: 20511;"></div>
+                  <p>20,511</p>
+                </div>
+                <div class="redOne flex">
+                  <div class="person_Red" style="--value: 6854;"></div>
+                  <p>6,854</p>
+                </div>
+                </div>
+            </div>
+            <div class="person flex">
+              <img src="images/peopleList/Capicorn.png" alt="Capicorn" />         
+              <div class="person-rate">
+                <h2 class="person_name">Capicorn</h2>
+                <div class="greenOne flex">
+                  <div class="person_Green" style="--value: 11738;"></div>
+                  <p>11,738</p>
+                </div>
+                <div class="redOne flex">
+                  <div class="person_Red" style="--value: 4491;"></div>
+                  <p>4,491</p>
+                </div>
+                </div>
+            </div>
+            <div class="person flex">
+              <img src="images/peopleList/Samara.jpg" alt="Samara" />         
+              <div class="person-rate">
+                <h2 class="person_name">Samara</h2>
+                <div class="greenOne flex">
+                  <div class="person_Green" style="--value: 140603;"></div>
+                  <p>980,603</p>
+                </div>
+                <div class="redOne flex">
+                  <div class="person_Red" style="--value: 4239;"></div>
+                  <p>4,239</p>
+                </div>
+                </div>
+            </div>
+            <div class="person flex">
+              <img src="images/peopleList/Qualitylover.jpg" alt="Qualitylover" />         
+              <div class="person-rate">
+                <h2 class="person_name">Qualitylover</h2>
+                <div class="greenOne flex">
+                  <div class="person_Green" style="--value: 59705;"></div>
+                  <p>169,705</p>
+                </div>
+                <div class="redOne flex">
+                  <div class="person_Red" style="--value: 3742;"></div>
+                  <p>3,742</p>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="Peoples left">
+            <div class="person flex">
+              <img src="images/peopleList/chkchkboom.jpg" alt="chkchkboom" />         
+              <div class="person-rate">
+                <h2 class="person_name">chkchkboom</h2>
+                <div class="greenOne flex">
+                  <div class="person_Green" style="--value: 10188;"></div>
+                  <p>10,188</p>
+                </div>
+                <div class="redOne flex">
+                  <div class="person_Red" style="--value: 9652;"></div>
+                  <p>9,652</p>
+                </div>
+                </div>
+            </div>
+            <div class="person flex">
+              <img src="images/peopleList/Il_Cinepatica.jpg" alt="Il_Cinepatica" />         
+              <div class="person-rate">
+                <h2 class="person_name">Il_Cinepatica</h2>
+                <div class="greenOne flex">
+                  <div class="person_Green" style="--value: 42836;"></div>
+                  <p>136,836</p>
+                </div>
+                <div class="redOne flex">
+                  <div class="person_Red" style="--value: 4694;"></div>
+                  <p>4,694</p>
+                </div>
+                </div>
+            </div>
+            <div class="person flex">
+              <img src="images/peopleList/CXC600.jpg" alt="CXC600" />         
+              <div class="person-rate">
+                <h2 class="person_name">CXC600</h2>
+                <div class="greenOne flex">
+                  <div class="person_Green" style="--value: 50836;"></div>
+                  <p>172,767</p>
+                </div> 
+                <div class="redOne flex">
+                  <div class="person_Red" style="--value: 4241;"></div>
+                  <p>4,241</p>
+                </div>
+                </div>
+            </div>
+            <div class="person flex">
+              <img src="images/peopleList/ggalarza25.png" alt="ggalarza25" />         
+              <div class="person-rate">
+                <h2 class="person_name">ggalarza25</h2>
+                <div class="greenOne flex">
+                  <div class="person_Green" style="--value: 60836;"></div>
+                  <p>226,375</p>
+                </div>
+                <div class="redOne flex">
+                  <div class="person_Red" style="--value: 4106;"></div>
+                  <p>4,106</p>
+                </div>
+                </div>
+            </div>
+            <div class="person flex">
+              <img src="images/peopleList/raze464.jpg" alt="raze464" />         
+              <div class="person-rate">
+                <h2 class="person_name">raze464</h2>
+                <div class="greenOne flex">
+                  <div class="person_Green" style="--value: 25340;"></div>
+                  <p>32,340</p>
+                </div>
+                <div class="redOne flex">
+                  <div class="person_Red" style="--value: 3428;"></div>
+                  <p>3,428</p>
+                </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
 
     <footer id="footer" class="footer">
-      <div class="container flex">
-        <div class="footer-brand">
-          <img id="brand" src="images/brend.svg" alt="" />
-          <button class="footer-btn">Вступить в сообщество</button>
-        </div>
-        <div class="sections">
-          <h2>Главное</h2>
-          <a href="">О TMDB</a>
-          <a href="">Связаться с нами</a>
-          <a href="">Форумы поддержки</a>
-          <a href="">API</a>
-          <a href="">Статус системы</a>
-        </div>
-        <div class="sections">
-          <h2>Участвуйте</h2>
-          <a href="">Библия редакторов</a>
-          <a href="">Добавить новый фильм</a>
-          <a href="">Добавить новый сериал</a>
-        </div>
-        <div class="sections">
-          <h2>Сообщество</h2>
-          <a href="">Руководства</a>
-          <a href="">Обсуждения</a>
-          <a href="">Доска почёта</a>
-        </div>
-        <div class="sections">
-          <h2>О праве</h2>
-          <a href="">РУсловия использования</a>
-          <a href="">API Правила использования</a>
-          <a href="">Политика конфиденциальности</a>
-          <a href="">DMCA Policy</a>
+      <div class="container">
+        <div class="footer-info">
+          <div class="footer-brand">
+            <img id="brand" src="images/brend.svg" alt="" />
+            <button class="footer-btn">Вступить в сообщество</button>
+          </div>
+          <div class="footer-contact">
+            <div class="informations">
+              <div class="sections">
+                <h2>Главное</h2>
+                <a href="">О TMDB</a>
+                <a href="">Связаться с нами</a>
+                <a href="">Форумы поддержки</a>
+                <a href="">API</a>
+                <a href="">Статус системы</a>
+              </div>
+              <div class="sections">
+                <h2>Участвуйте</h2>
+                <a href="">Библия редакторов</a>
+                <a href="">Добавить новый фильм</a>
+                <a href="">Добавить новый сериал</a>
+              </div>
+            </div>
+            <div class="informations">
+              <div class="sections">
+                <h2>Сообщество</h2>
+                <a href="">Руководства</a>
+                <a href="">Обсуждения</a>
+                <a href="">Доска почёта</a>
+              </div>
+              <div class="sections">
+                <h2>О праве</h2>
+                <a href="">РУсловия использования</a>
+                <a href="">API Правила использования</a>
+                <a href="">Политика конфиденциальности</a>
+                <a href="">DMCA Policy</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -19,23 +19,26 @@ function displayCard(listName) {
   fetch(url, options)
     .then((res) => res.json())
     .then((json) => {
-      console.log(json);
       json.results.forEach((movie) => {
         listName.innerHTML += `
           <div class='card'>
-              <img class='card-icon' src='images/icon.svg' alt='icon'>
-              <a href='movie.html?movie=${
-                movie.id
-              }' style='text-decoration:none;'><img id='card-img' src='https://media.themoviedb.org/t/p/w220_and_h330_face${
-          movie.poster_path
-        }' alt="${movie.original_title}"></a>
-              <div class="circular-progress">
-                  <span class="percentage">${Math.floor(
-                    movie.popularity
-                  )}<sup style='font-size:8px; color: rgba(255, 255, 255, 0.682);'>%</sup></span>        
+              <div>
+                 <img class='card-icon' src='images/icon.svg' alt='icon'>
+                  <a href='movie.html?movie=${
+                    movie.id
+                  }' style='text-decoration:none;'><img id='card-img' src='https://media.themoviedb.org/t/p/w220_and_h330_face${
+                    movie.poster_path
+                  }' alt="${movie.original_title}"></a>
+                  <div class="circular-progress">
+                      <span class="percentage">${Math.floor(
+                        movie.popularity
+                      )}<sup style='font-size:8px; color: rgba(255, 255, 255, 0.682);'>%</sup></span>        
+                  </div>
               </div>
-              <p class='subtitle'>${movie.title}</p>
-              <i class='date'>${movie.release_date}</i>
+              <div>
+                <p class='subtitle'>${movie.title}</p>
+                <i class='date'>${movie.release_date}</i>
+              </div>
           </div>
         `;
       });
@@ -58,13 +61,16 @@ function displayCard2(listName) {
   fetch(url2, options2)
     .then((res) => res.json())
     .then((json) => {
-      json.results.forEach((movie) => {
+      json.results?.forEach((movie) => {
         listName.innerHTML += `
             <div class='card'>
                <img class='card-icon' src='images/icon.svg' alt='icon'>
-               <img id='card-img' src='https://media.themoviedb.org/t/p/w220_and_h330_face${
-                 movie.poster_path
-               }' alt="${movie.original_title}">
+               <a href='movie.html?movie=${
+                    movie.id
+                  }' style='text-decoration:none;'><img id='card-img' src='https://media.themoviedb.org/t/p/w220_and_h330_face${
+                    movie.poster_path
+                  }' alt="${movie.original_title}"
+               </a>
                <div class="circular-progress">
                     <span class="percentage">${Math.floor(
                       movie.popularity
@@ -133,3 +139,5 @@ function bigImg(x, url) {
 function normalImg(x) {
   x.style.transform = "scale(1)";
 }
+
+
