@@ -1,10 +1,13 @@
 /* movie-info */
 .movie-info{
     width: 100%;
-    height: 510px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.information{
+    display: flex;
 }
 
 #movie-info-img{
@@ -15,13 +18,12 @@
     border-radius: 20px;
 }
 
-#img-info{
+.img-info{
     flex: 2;
 }
 
 .movie-name{
     color: white;
-    padding-left: 50px;
     padding-top: 40px;
     margin: 0;
 }
@@ -43,8 +45,7 @@
 .info-four{
     height: 20px;
     align-items: center;
-    margin-top: 5px;
-    padding-left: 50px;    
+    margin-top: 5px;  
 }
 
 .info-four .certification{
@@ -110,7 +111,6 @@
     display: flex;
     gap: 10px;
     margin-top: 30px;
-    margin-left: 15px;
 }
 
 .add-info{
@@ -132,7 +132,7 @@
     width: 250px;
     height: 20px;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .info-treiler p{
@@ -146,20 +146,15 @@
 }
 
 .obzor i{
-    padding-left: 60px;
     display: block;
     color: rgba(255, 255, 255, 0.595);
     margin-top: 30px;
 }
 
 .obzor h2{
-    padding-left: 60px;
     margin-top: 5px;
 }
 
-.obzor p{
-    padding-left: 60px;
-}
 
 .dot{
     margin: 0 5px 0 0; 
@@ -297,12 +292,6 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
 }
 
-#discuss img{
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
-
 #discuss a{
     font-size: 1em;
     color: #000;
@@ -322,8 +311,17 @@
     margin-left: 250px;
 }
 
+.videorolik{
+    display: flex;
+}
+
 .videorolik-section{
+    display: flex;
     margin-left: 20px;
+}
+
+.rolik{
+    display: flex;
 }
 
 .videorolik-section p.active{
@@ -342,3 +340,305 @@
     margin-left: 2px;
 }
 
+.popular-video{
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.popular-video::-webkit-scrollbar{
+    height: 8px; 
+}
+
+.popular-video::-webkit-scrollbar-thumb{
+    background-color: #44444454;
+    border-radius: 4px; 
+}
+
+.recommend_movies{
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.recommend_movies::-webkit-scrollbar{
+    height: 8px; 
+}
+
+.recommend_movies::-webkit-scrollbar-thumb{
+    background-color: #44444454;
+    border-radius: 4px; 
+}
+
+.recommend_movies .recommend_card{
+    width: 220px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.recommend_movies img{
+    width: 220px;
+    border-radius: 5px;
+    height: 141px;
+}
+.recommend_overflow{
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 0;
+    display: none;
+}
+
+.recommend_overflow div{
+    display: flex;
+    align-items: center;
+}
+
+.recommend_name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status_information{
+    padding-left: 50px;
+    padding-top: 80px;
+}
+
+.status_media{
+    font-size: 2.4rem;
+}
+.keywords{
+    flex-wrap: wrap;
+}
+
+.key_btn{
+    border: .1px solid grey;
+    border-radius: 4px;
+    padding: 3px;
+    margin: 3px;
+    background-color: rgba(0, 0, 0, .1);
+    font-size: .9em;
+}
+
+@media only screen and (max-width:1020px){
+    .status_media{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width:992px){
+    .status_media{
+        font-size: 1.7rem;
+    }
+    .сети h2{
+        font-size: 1.2em;
+    }
+    .сети a{
+        font-size: 1em;
+    }
+    .videorolik_title{
+        font-size: 1.2em;
+    }
+    .videorolik-section p{
+        font-size: .9em;
+        padding-left: 12px;
+    }
+    #commentary{
+        font-style: .5em;
+    }
+    .fame_video{
+        height: 250px;
+    }
+    .recommend_title{
+        font-style: 1.2em;
+    }
+    .recommend_card img{
+        width: 200px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width:860px){
+    .paddingLeft{
+        padding-left: 20px;
+    }
+    .status_media{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width:840px){
+    .actors-info{
+        display: block;
+    }
+    .actors{
+        width: 100%;
+    }
+    .status_information{
+        padding: 0px;
+    }
+    .status_info{
+        display: flex;
+    }
+    .status_info div{
+        margin: 5px;
+        padding-right: 20px;
+    }
+    .status_info div h3{
+        font-style: 1.2em;
+    }
+    .status_media{
+        font-size: 2rem;
+    }
+    #movie-info-img{
+        width: 250px;
+        height: 400px;
+    }
+    .movie-name{
+        font-size: 1.7rem;
+    }
+    .rating {
+        width: 50px;
+        height: 50px;
+    }
+    .percentage{
+        font-size: 16px;
+    }
+    .reyting{
+        margin-left: 60px;
+    }
+    .add-info{
+        width: 40px;
+        height: 40px;
+    }
+    .add-info i{
+       margin-top: 12px;
+    }
+    .info-treiler{
+        padding-left: 10px;
+       
+    }
+    #info-player{
+        margin-left: 0;
+        padding: 0;
+    }
+    .keywords h3{
+        font-style: 1.2em;
+    }
+    .status_blok{
+        display: flex;
+    }
+}
+@media only screen and (max-width:768px){
+    .information{
+        display: block;
+    }
+    #movie-info-img{
+        width: 100%;
+    }
+    .videorolik{
+        display: block;
+    }
+    .videorolik h2{
+        margin: 0;
+    }
+    .videorolik-section{
+        margin-left: 0px;
+    }
+    .sections h2{
+        font-size: 1.4rem;
+        line-height: 35px;
+        text-align: left;
+    }
+    .sections a{
+        font-size: 1.3rem;
+        line-height: 35px;
+        text-align: left;
+    }
+    .status_blok{
+        display: flex;
+    }
+}
+@media only screen and (max-width:574px){
+    .actors-card{
+        display: block;
+        gap: 10px; 
+        overflow-y: scroll;         
+        height: 300px;
+    }
+    .actors-card div{
+        width: 50%;
+        height: 240px;
+        margin: 9px auto;
+    }
+    .actor-img{
+        width: 100%;
+        height: 175px;    
+        border-radius: 10px;
+    }
+    .actors-card::-webkit-scrollbar,
+    .popular-video::-webkit-scrollbar,
+    .recommend_movies::-webkit-scrollbar{
+        width: 8px; 
+    }
+    .popular-video{
+        display: block;
+        overflow-y: scroll;
+        height: 300px;
+        text-align: center;
+    }
+    .recommend_movies{
+        display: block;
+        overflow-y: scroll;
+        height: 300px;
+    }
+    .recommend_movies .recommend_card{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .recommend_movies img{
+        width: 100%;
+        height: 151px;
+    }
+   
+    .сети{
+        display: block;
+    }
+    .сети div,
+    .сети a{
+        margin: 0 15px 0 0;
+        padding: 0;
+    }
+    .movie-name{
+        font-size: 1.5rem;
+    }
+    .obzor h2{
+        font-size: 1.4rem;
+    }
+    .obzor-text{
+        font-size: 1rem;
+    }
+    
+    .status_info div{
+        margin: 5px;
+        padding-right: 20px;
+    }
+    .status_info div h3{
+        font-size: 1em;
+    }
+    .status_info p{
+        font-size: .8em;
+    }
+    .status_media{
+        font-size: 1.8rem;
+    }
+    
+}
+
+@media only screen and (max-width:450px){
+    .rolik{
+        display: block;
+    }
+    .status_blok{
+        display: block;
+    }
+}

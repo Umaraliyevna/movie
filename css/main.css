@@ -19,8 +19,8 @@ body::-webkit-scrollbar-thumb{
 }
 
 .container {
-  margin: 0 auto;
   max-width: 1300px;
+  margin: 0 auto;
   width: 100%;
   padding: 12px;
 }
@@ -38,7 +38,6 @@ body::-webkit-scrollbar-thumb{
 .circular-progress {
   position: absolute;
   margin-top: -25px;
-  margin-left: 10px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -51,7 +50,7 @@ body::-webkit-scrollbar-thumb{
 
 .percentage {
   color: #fff;
-  font-size: 14px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -326,9 +325,9 @@ header {
 /* Footer */
 .footer{
   width: 100%;
-  height: 327px;
   background-color: #03243F;
   margin-top: 30px;
+  padding-bottom: 20px;
 }
 
 .footer-info{
@@ -441,32 +440,22 @@ header{
     width: 90%;
     padding: 10px;
   }
-  .footer{
-    height: 630px;
-  }
-  .footer-info{
-    height: 570px;
-  }
   .footer-brand{
     display: none;
   }
   .footer-contact{
     display: flex;
     width: 100%;
-    height: 100%;
   }
 
   .footer-contact div{
     width: 100%;
-    height: 100%;
   }
   .informations{
     display: block;
-    height: 100%;
   }
   .informations div{
     width: 100%;
-    height: 50%;
     margin-top: 15px;    
     text-align: left;
   }
@@ -488,33 +477,24 @@ header{
     width: 85%;
     padding: 8px;
   }
-  .footer{
-    height: 650px;
-  }
-  .footer-info{
-    height: 98%;
-  }
+  
   .footer-brand{
     display: none;
   }
   .footer-contact{
     display: flex;
     width: 100%;
-    height: 100%;
   }
 
   .footer-contact div{
     width: 100%;
-    height: 100%;
   }
   .informations{
     display: block;
-    height: 100%;
     width: 50%;
   }
   .informations div{
     width: 100%;
-    height: 50%;
     margin-top: 35px;    
     text-align: left;
   }
@@ -522,16 +502,15 @@ header{
     width: 100%;
   }
   .sections h2{
-    font-size: 1.9rem;
-    line-height: 35px;
-    text-align: left;
-  }
-  .sections a{
     font-size: 1.8rem;
     line-height: 35px;
     text-align: left;
   }
-  
+  .sections a{
+    font-size: 1.7rem;
+    line-height: 35px;
+    text-align: left;
+  }  
 }
 
 @media only screen and (max-width:576px) {
@@ -540,12 +519,8 @@ header{
     width: 75%;
     padding: 6px;
   }
-  .footer{
-    height: 790px;
-  }
   .footer-info{
     width: 100%;
-    height: 100vh;
     margin: 0 auto;
     text-align: left;
     justify-content: left;
