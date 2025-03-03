@@ -282,7 +282,7 @@ header {
 }
 
 .trend {
-  height: 60px;
+  display: flex;
   align-items: center;
   gap: 15px;
   padding-top: 20px;
@@ -321,6 +321,8 @@ header {
   scroll-behavior: smooth;
   background: url(/images/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg)
     no-repeat center bottom;
+  
+  
 }
 
 .movie-list::-webkit-scrollbar {
@@ -370,7 +372,6 @@ header {
   width: 100%;
   background: url(/images/video-carusel/video1.jpg) no-repeat;
   background-size: cover;
-  height: 340px;
 }
 
 .video-title {
@@ -483,7 +484,6 @@ header {
 /* banner */
 .banner {
   width: 100%;
-  height: 270px;
   background: url(/images/BannerBgImg.jpg) no-repeat;
   background-size: cover;
 }
@@ -492,6 +492,8 @@ header {
   font-weight: bold;
   font-size: 35px;
   color: #fff;
+  margin: 0;
+  padding-top: 10px;
 }
 .bannerWriters p {
   color: #fff;
@@ -508,6 +510,7 @@ header {
   width: 220px;
   height: 35px;
   cursor: pointer;
+  margin-bottom: 15px;
 }
 
 /* list people */
@@ -538,6 +541,9 @@ header {
   height: 9px;
   border-radius: 50%;
   background-image: linear-gradient(90deg, #fcbe6f, #da3d63);
+}
+.peopleList{
+  display: flex;
 }
 .Peoples {
   width: 50%;
@@ -592,7 +598,8 @@ header {
   margin-right: 5px;
 }
 
-.person {
+.person{
+  display: flex;
   margin-top: 15px;
 }
 
@@ -610,8 +617,12 @@ header {
   font-size: 1.2em;
   margin: 0;
 }
+.peopleList{
+  display: flex;
+}
 
-.greenOne {
+.greenOne{
+  display: flex;
   align-items: center;
 }
 
@@ -621,7 +632,8 @@ header {
   font-weight: bold;
 }
 
-.redOne {
+.redOne{
+  display: flex;
   align-items: center;
 }
 
@@ -644,4 +656,230 @@ header {
   height: 7px;
   border-radius: 20px;
   background-image: linear-gradient(to right, #fdc070, #da3e63);
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width:1400px) {
+  .movies-carusel,
+  .movies-carusel-2,
+  .videos-carusel{
+    margin: 0 auto;
+  }
+  #card-img{
+    width: 95%;
+  }
+  .person_Green{
+    width: calc(var(--value) * 0.0022px);
+  }  
+  .person_Red{
+    width: calc(var(--value) * 0.029px);
+  }
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px) {
+  .movies-carusel,
+  .movies-carusel-2,
+  .videos-carusel{
+    margin: 0 auto;
+  }
+  #card-img{
+    width: 90%;    
+    height: 210px;
+  }
+  .person_Green{
+    width: calc(var(--value) * 0.0015px);
+  }  
+  .person_Red{
+    width: calc(var(--value) * 0.02px);
+  }
+  .card-icon{
+    margin: 10px 0 0 100px;
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:992px) {
+  .movies-carusel,
+  .movies-carusel-2,
+  .videos-carusel{
+    margin: 0 auto;
+  }
+  #card-img{
+    width: 85%;
+    height: 195px;
+  }
+  .peopleList{
+    display: block;
+  }
+  .person_Green{
+    width: calc(var(--value) * 0.0025px);
+  }  
+  .person_Red{
+    width: calc(var(--value) * 0.034px);
+  }
+  .card-icon{
+    margin: 10px 0 0 90px;
+  }
+  .sections a{
+    font-size: 1.5rem;
+  }
+
+}
+
+@media only screen and (min-width:576px) and (max-width:768px) {
+  .movies-carusel,
+  .movies-carusel-2,
+  .videos-carusel{
+    margin: 0 auto;
+  }  
+  .movie-list,
+  .video-list{
+    display: block;
+    overflow-y: auto;
+    height: 300px;
+    overflow: hidden;
+  }
+  .card,
+  .card-video {
+    width: 100%;
+    margin: 0 auto;
+  }  
+  #card-img,
+  #video-img{
+    text-align: center;
+    width: 90%;
+    height: 200px;
+  }
+  .peopleList{
+    display: block;
+  }
+  .person_Green{
+    width: calc(var(--value) * 0.0017px);
+  }  
+  .person_Red{
+    width: calc(var(--value) * 0.023px);
+  }
+  .banner{
+    text-align: center;
+    justify-content: center;
+  }
+  .banner button{    
+    padding-bottom: 30px;
+  }
+  .card-icon{
+    margin: 10px 0 0 420px;
+  }
+  #player{
+    margin-top: -150px;
+    margin-left: 125px;
+  }
+  .btn-video{  
+    padding: 7px 5px;
+  }
+  .trend{
+    display: block;
+  }
+  .trend h2{
+    text-align: center;
+    margin: 10px auto;
+  }
+  .button-group {
+    margin: 0 auto;
+    padding: 0;
+    width: 270px;
+  }
+  .button-group button{
+    width: 50%;
+    padding: 5px;
+  }
+
+  .video-title{
+    text-align: center;
+    width: 300px;
+    margin-top: 0;
+    padding: 0;
+  }
+  .video-btn{
+    width: 150px;
+    margin: 5px auto;
+  }
+  .sections a{
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width:576px) {
+  .movies-carusel,
+  .movies-carusel-2,
+  .videos-carusel{
+    margin: 0 auto;
+  }
+  .movie-list,
+  .video-list{
+    display: block;
+    overflow-y: auto;
+    height: 300px;
+    overflow: hidden;
+  }
+  .card,
+  .card-video {
+    margin: 0 auto;
+  }
+  #card-img,
+  #video-img{
+    width: 100%;
+    height: 185px;
+  }
+  .peopleList{
+    display: block;
+  }
+  .person_Green{
+    width: calc(var(--value) * 0.0012px);
+  }  
+  .person_Red{
+    width: calc(var(--value) * 0.018px);
+  }
+  .banner{
+    text-align: center;
+    justify-content: center;
+  }  
+  #player{
+    margin-top: -130px;
+    margin-left: 100px;
+  }
+  .btn-movie{    
+    padding: 7px 3px;
+  }
+  .card-icon{
+    margin: 10px 0 0 350px;
+  }
+  .trend{
+    display: block;
+  }
+  .trend h2{
+    text-align: center;
+    margin: 10px auto;
+  }
+  .button-group {
+    margin: 0 auto;
+    padding: 0;
+    width: 270px;
+  }
+  .button-group button{
+    width: 50%;
+    padding: 5px;
+  }
+
+  .video-title{
+    text-align: center;
+    width: 300px;
+    margin-top: 0;
+    padding: 0;
+  }
+  .video-btn{
+    width: 150px;
+    margin: 5px auto;
+  }
+  .sections a{
+    font-size: 1.2rem;
+  }
 }

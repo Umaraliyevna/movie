@@ -12,79 +12,75 @@
     />
   </head>
   <body>
-       <header class="header">
-        
-      <div class="logo">
-        <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
-      </div>
-     
-      <nav class="nav-menu">
-        <ul id="sidebar" class="sidebar">
-           <img id="CloseIcon" onclick="hideSidebar()" src="/images/header-images/Close.svg">
-          <li><a href="#"></a>Фильмы</li>
-          <li><a href="#"></a>Сериалы</li>
-          <li><a href="#"></a>Люди</li>
-          <li><a href="#"></a>Ещё</li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">Фильмы</a>
-            <div class="dropDown">
-              <ul>
-                <li><a href="#">Популярные</a></li>
-                <li><a href="#">Смотрят сейчас</a></li>
-                <li><a href="#">Ожидаемые</a></li>
-                <li><a href="#">Лучшие</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">Сериалы</a>
-            <div class="dropDown">
-              <ul>
-                <li><a href="#">Популярные</a></li>
-                <li><a href="#">Смотрят сейчас</a></li>
-                <li><a href="#">Ожидаемые</a></li>
-                <li><a href="#">Лучшие</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">Люди</a>
-            <div class="dropDown">
-              <ul>
-                <li><a href="#">Популярные Люди</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">Ещё</a>
-            <div class="dropDown">
-              <ul>
-                <li><a href="#">Обсуждения</a></li>
-                <li><a href="#">Доска почёта</a></li>
-                <li><a href="#">Поддержка</a></li>
-                <li><a href="#">API</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <div class="header-right">
-        <div class="switch-lang">RU</div>
-        <img src="images/header-images/searchIcon.svg" alt="Search" />
-
-        <img id="MenuIcom" onclick="showSidebar()" src="/images/header-images/menuSvg.svg">
+    <header class="header">
+      <div class="container">
+        <div class="BigHeader">
+          <div class="logo">
+            <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
+          </div>
+          <nav class="nav-menu">
+            <ul>
+              <li>
+                <a href="#" class="smoothScroll">Фильмы</a>
+                <div class="dropDown">
+                  <ul>
+                    <li><a href="#">Популярные</a></li>
+                    <li><a href="#">Смотрят сейчас</a></li>
+                    <li><a href="#">Ожидаемые</a></li>
+                    <li><a href="#">Лучшие</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="smoothScroll">Сериалы</a>
+                <div class="dropDown1">
+                  <ul>
+                    <li><a href="#">Популярные</a></li>
+                    <li><a href="#">Смотрят сейчас</a></li>
+                    <li><a href="#">Ожидаемые</a></li>
+                    <li><a href="#">Лучшие</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="smoothScroll">Люди</a>
+                <div class="dropDown2">
+                  <ul>
+                    <li><a href="#">Популярные Люди</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="smoothScroll">Ещё</a>
+                <div class="dropDown3">
+                  <ul>
+                    <li><a href="#">Обсуждения</a></li>
+                    <li><a href="#">Доска почёта</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="#">API</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-right">
+            <img src="images/header-images/plusLogo.svg" alt="Plus" />
+            <div class="switch-lang">RU</div>
+            <ul>
+              <li><a href="#">Войти</a></li>
+              <li><a href="#">Присоединиться к TMDB</a></li>
+            </ul>
+  
+            <img src="images/header-images/searchIcon.svg" alt="Search" />
+          </div>
+        </div>
       </div>
 
     </header>
-  </body>
-</html>
-
-    <!-- <div class="search-box container">
+    <div class="search-box container">
       <img src="images/header-images/searchIcon.svg" class="search-icon" />
       <input type="text" placeholder="Найти фильм, сериал, персону..." />
-    </div> -->
+    </div>
 
     <div class="homeMenu">
       <div class="shadow">
@@ -100,7 +96,7 @@
     <div class="movies-carusel" id="movies-carusel">
       <div class="container">
         <div class="">
-          <div class="trend flex">
+          <div class="trend">
             <h2 class="title">В тренде</h2>
             <div class="button-group">
               <button
@@ -121,7 +117,7 @@
     <div class="videos-carusel">
       <div class="shadow">
         <div class="container">
-          <div class="trend flex">
+          <div class="trend">
             <h2 class="title video-title">Последние трейлеры</h2>
             <div class="button-group vidoe">
               <button
@@ -136,6 +132,7 @@
             </div>
           </div>
           <div id="video-list" class="video-list"></div>
+          <div class="video_modal" id="video_modal"></div>
         </div>
       </div>
     </div>
@@ -144,7 +141,7 @@
         <div class="">
           <div class="trend flex">
             <h2 class="title">Что популярно</h2>
-            <div class="button-group">
+            <div class="video-btn">
               <button
                 id="text-none"
                 class="btn-movie active"
@@ -189,17 +186,17 @@
             </div>
           </div>
         </div>
-        <div class="flex">
+        <div class="peopleList">
           <div class="Peoples">
-            <div class="person flex">
+            <div class="person">
               <img src="images/peopleList/Shei.jpg" alt="Shei" />         
               <div class="person-rate">
                 <h2 class="person_name">Shei</h2>
-                <div class="greenOne flex">
+                <div class="greenOne">
                   <div class="person_Green" style="--value: 201934;"></div>
                   <p>1,619,346</p>
                 </div>
-                <div class="redOne flex">
+                <div class="redOne">
                   <div class="person_Red" style="--value: 16050;"></div>
                   <p>16,050</p>
                 </div>
@@ -298,7 +295,7 @@
                 <div class="greenOne flex">
                   <div class="person_Green" style="--value: 50836;"></div>
                   <p>172,767</p>
-                </div>
+                </div> 
                 <div class="redOne flex">
                   <div class="person_Red" style="--value: 4241;"></div>
                   <p>4,241</p>
@@ -338,37 +335,45 @@
     </div>
 
     <footer id="footer" class="footer">
-      <div class="container flex">
-        <div class="footer-brand">
-          <img id="brand" src="images/brend.svg" alt="" />
-          <button class="footer-btn">Вступить в сообщество</button>
-        </div>
-        <div class="sections">
-          <h2>Главное</h2>
-          <a href="">О TMDB</a>
-          <a href="">Связаться с нами</a>
-          <a href="">Форумы поддержки</a>
-          <a href="">API</a>
-          <a href="">Статус системы</a>
-        </div>
-        <div class="sections">
-          <h2>Участвуйте</h2>
-          <a href="">Библия редакторов</a>
-          <a href="">Добавить новый фильм</a>
-          <a href="">Добавить новый сериал</a>
-        </div>
-        <div class="sections">
-          <h2>Сообщество</h2>
-          <a href="">Руководства</a>
-          <a href="">Обсуждения</a>
-          <a href="">Доска почёта</a>
-        </div>
-        <div class="sections">
-          <h2>О праве</h2>
-          <a href="">РУсловия использования</a>
-          <a href="">API Правила использования</a>
-          <a href="">Политика конфиденциальности</a>
-          <a href="">DMCA Policy</a>
+      <div class="container">
+        <div class="footer-info">
+          <div class="footer-brand">
+            <img id="brand" src="images/brend.svg" alt="" />
+            <button class="footer-btn">Вступить в сообщество</button>
+          </div>
+          <div class="footer-contact">
+            <div class="informations">
+              <div class="sections">
+                <h2>Главное</h2>
+                <a href="">О TMDB</a>
+                <a href="">Связаться с нами</a>
+                <a href="">Форумы поддержки</a>
+                <a href="">API</a>
+                <a href="">Статус системы</a>
+              </div>
+              <div class="sections">
+                <h2>Участвуйте</h2>
+                <a href="">Библия редакторов</a>
+                <a href="">Добавить новый фильм</a>
+                <a href="">Добавить новый сериал</a>
+              </div>
+            </div>
+            <div class="informations">
+              <div class="sections">
+                <h2>Сообщество</h2>
+                <a href="">Руководства</a>
+                <a href="">Обсуждения</a>
+                <a href="">Доска почёта</a>
+              </div>
+              <div class="sections">
+                <h2>О праве</h2>
+                <a href="">РУсловия использования</a>
+                <a href="">API Правила использования</a>
+                <a href="">Политика конфиденциальности</a>
+                <a href="">DMCA Policy</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

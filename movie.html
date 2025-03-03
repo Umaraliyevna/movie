@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="css/movie.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-</head>
+  </head>
 <body>
     <header class="header">
-        <div class="container">
-          <div class="BigHeader">
-            <div class="logo">
-              <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
-            </div>
-            <nav class="nav-menu">
+      <div class="container">
+        <div class="BigHeader">
+          <div class="logo">
+            <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
+          </div>
+          <nav class="nav-menu">
               <ul>
                 <li>
                   <a href="#" class="smoothScroll">Фильмы</a>
@@ -60,8 +60,8 @@
                   </div>
                 </li>
               </ul>
-            </nav>
-            <div class="header-right">
+          </nav>
+          <div class="header-right">
               <img src="images/header-images/plusLogo.svg" alt="Plus" />
               <div class="switch-lang">RU</div>
               <ul>
@@ -70,18 +70,16 @@
               </ul>
     
               <img src="images/header-images/searchIcon.svg" alt="Search" />
-            </div>
           </div>
         </div>
-      </header>
-      <div class="search-box container">
-        <img src="images/header-images/searchIcon.svg" class="search-icon" />
-        <input type="text" placeholder="Найти фильм, сериал, персону..." />
       </div>
+    </header>
+     
     <div class="movie-info" id="movie-info">
       <div class="shadow">
         <div class="container">
-          <div class="flex" id="information"></div>
+          <div class="information" id="information">            
+          </div>
         </div>
       </div>
     </div>
@@ -93,17 +91,18 @@
                     <div class="actors-card" id="actors-card"></div>
                     <p class="coctav">Полный актёрский и съёмочный состав</p>
                     <hr>
+                    
                     <div class="сети">
-                        <h2>Социальные <br> сети</h2>
+                        <h2>Социальные сети</h2>
                         <div>
-                            <a class="comment active" onclick="socialMedia(this,'comment')">Рецензии <span>0</span></a>
-                            <a class="comment discussion" onclick="socialMedia(this,'comment')">Обсуждения  <span>7</span></a>
+                            <a id="comment" class="comment active" onclick="socialMedia(this,'comment')">Рецензии <span>0</span></a>
+                            <a id="discussion" class="comment discussion" onclick="socialMedia(this,'discussion')">Обсуждения  <span>7</span></a>
                         </div>
                     </div>
-                    <div id="comment">
-                        <p id="comment">Рецензий на Капитан Америка: Новый Мир нет. Не желаете ли Вы написать одну?</p>
+                    <div id="commentContent" class="comment">
+                        <p id="commentary">Рецензий на Капитан Америка: Новый Мир нет. Не желаете ли Вы написать одну?</p>
                     </div>
-                    <div id="discussion">
+                    <div id="discussionContent" class="comment">
                         <div id="discuss">
                             <div class="flex">
                                 <img src="images/comment.jpg" alt="">
@@ -123,63 +122,93 @@
                     </div>
                     <hr>
                     <div>
-                        <div class="flex">
-                            <h2>Медиа</h2>
-                            <div class="videorolik-section flex">
-                                <p class="active">Самое популярное</p>
-                                <p>Видеоролики <span>1</span></p>
-                                <p>Задники <span>51</span></p>
-                                <p>Постеры <span>205</span></p>
+                        <div class="videorolik">
+                            <h2 class="videorolik_title">Медиа</h2>
+                            <div class="videorolik-section">
+                                <div class="rolik">
+                                  <p class="video_col active"onclick="socialMedia(this,'video_col')">Самое популярное</p>
+                                  <p class="video_col" onclick="socialMedia(this,'video_col')">Видеоролики <span>1</span></p>
+                                </div>
+                                <div class="rolik">
+                                  <p class="video_col" onclick="socialMedia(this,'video_col')">Задники <span>51</span></p>
+                                  <p class="video_col" onclick="socialMedia(this,'video_col')">Постеры <span>205</span></p>
+                                </div>
                             </div>
                         </div>
                         <div class="popular-video" id="popular-video">
 
                         </div>
                     </div>
+                    <hr>
+                    <div>
+                      <h2 class="recommend_title">Recommendations</h2>
+                      <div class="recommend_movies" id="recommend_movies">
+                      </div>                      
+                    </div>
+                    <div class="rec_video" id="rec_video"></div>
                 </div>
+                <hr>
                 <div class="status">
-                    gfds
-                </div>
+                  <div class="status_information">
+                     <div class="status_media">
+                       <i class='bx bxl-twitter'></i>
+                       <i class='bx bxl-instagram' ></i>
+                       <i class='bx bx-link' ></i>
+                     </div>
+                     <div class="status_info" id="status_info"></div>
+                     <div class="keywords" id="keywords">
+                      <h3>Keywords</h3>
+                     </div>
+                     <hr>
+                  </div>
+               </div>
             </div>
         </div>
-        <div class="status"></div>
       </div>
     </div>
 
     <footer id="footer" class="footer">
-        <div class="container flex">
-            <div class="footer-brand">
-                <img id="brand" src="images/brend.svg" alt="">
-                <button class="footer-btn">Вступить в сообщество</button>
-            </div>
-            <div class="sections">
+      <div class="container">
+        <div class="footer-info">
+          <div class="footer-brand">
+            <img id="brand" src="images/brend.svg" alt="" />
+            <button class="footer-btn">Вступить в сообщество</button>
+          </div>
+          <div class="footer-contact">
+            <div class="informations">
+              <div class="sections">
                 <h2>Главное</h2>
                 <a href="">О TMDB</a>
                 <a href="">Связаться с нами</a>
                 <a href="">Форумы поддержки</a>
                 <a href="">API</a>
                 <a href="">Статус системы</a>
-            </div>
-            <div class="sections">
+              </div>
+              <div class="sections">
                 <h2>Участвуйте</h2>
                 <a href="">Библия редакторов</a>
                 <a href="">Добавить новый фильм</a>
                 <a href="">Добавить новый сериал</a>
+              </div>
             </div>
-            <div class="sections">
+            <div class="informations">
+              <div class="sections">
                 <h2>Сообщество</h2>
                 <a href="">Руководства</a>
                 <a href="">Обсуждения</a>
                 <a href="">Доска почёта</a>
-            </div>
-            <div class="sections">
+              </div>
+              <div class="sections">
                 <h2>О праве</h2>
                 <a href="">РУсловия использования</a>
                 <a href="">API Правила использования</a>
                 <a href="">Политика конфиденциальности</a>
                 <a href="">DMCA Policy</a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
     
     <script src="js/movie.js"></script>
