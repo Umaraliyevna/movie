@@ -74,16 +74,16 @@
         </div>
       </div>
     </header>
-     
-    <div class="movie-info" id="movie-info">
+
+    <section class="movie-info" id="movie-info">
       <div class="shadow">
         <div class="container">
           <div class="information" id="information">            
           </div>
         </div>
       </div>
-    </div>
-    <div class="role-section" id="role-section">
+    </section>
+    <section class="role-section" id="role-section">
         <div class="container">
             <div class="actors-info">
                 <div class="actors" id="actors">
@@ -99,7 +99,7 @@
                             <a id="discussion" class="comment discussion" onclick="socialMedia(this,'discussion')">Обсуждения  <span>7</span></a>
                         </div>
                     </div>
-                    <div id="commentContent" class="comment">
+                    <div id="commentContent" class="comment active">
                         <p id="commentary">Рецензий на Капитан Америка: Новый Мир нет. Не желаете ли Вы написать одну?</p>
                     </div>
                     <div id="discussionContent" class="comment">
@@ -108,14 +108,16 @@
                                 <img src="images/comment.jpg" alt="">
                                 <a href="">Is this going to <br> make $</a>
                             </div>
-                            <div class="data enter">
+                            <div class="enter">
+                              <div class="data">
                                 <p>Открыто</p>
-                            </div>
-                            <div class="data">
-                                <p>6</p>
-                            </div>
-                            <div class="flex data">                                
-                                <p>15 фев 2025 в 18:36 <br>от Adam</p>
+                              </div>
+                              <div class="data">
+                                  <p>6</p>
+                              </div>
+                              <div class="flex data">                                
+                                  <p>15 фев 2025 в 18:36 <br>от Adam</p>
+                              </div>
                             </div>
                         </div>
                         <p>К обсуждениям</p>
@@ -126,18 +128,19 @@
                             <h2 class="videorolik_title">Медиа</h2>
                             <div class="videorolik-section">
                                 <div class="rolik">
-                                  <p class="video_col active"onclick="socialMedia(this,'video_col')">Самое популярное</p>
-                                  <p class="video_col" onclick="socialMedia(this,'video_col')">Видеоролики <span>1</span></p>
+                                  <p class="video_col active"onclick="popularParts(this,'.video_col')">Самое популярное</p>
+                                  <p class="video_col" onclick="popularParts(this,'.video_col')">Видеоролики <span>1</span></p>
                                 </div>
                                 <div class="rolik">
-                                  <p class="video_col" onclick="socialMedia(this,'video_col')">Задники <span>51</span></p>
-                                  <p class="video_col" onclick="socialMedia(this,'video_col')">Постеры <span>205</span></p>
+                                  <p class="video_col" onclick="popularParts(this,'.video_col')">Задники <span>51</span></p>
+                                  <p class="video_col" onclick="popularParts(this,'.video_col')">Постеры <span>205</span></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="popular-video" id="popular-video">
-
-                        </div>
+                        <div class="popular-img" id="popular-img"></div>
+                        <div class="popular-videorolik" id="popular-videorolik"></div>
+                        <div class="popular-background" id="popular-background"></div>
+                        <div class="popular-poster" id="popular-poster"></div>
                     </div>
                     <hr>
                     <div>
@@ -146,8 +149,8 @@
                       </div>                      
                     </div>
                     <div class="rec_video" id="rec_video"></div>
+                    <hr>
                 </div>
-                <hr>
                 <div class="status">
                   <div class="status_information">
                      <div class="status_media">
@@ -164,7 +167,7 @@
                </div>
             </div>
         </div>
-      </div>
+      </section>
     </div>
 
     <footer id="footer" class="footer">

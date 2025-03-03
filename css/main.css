@@ -1,12 +1,13 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
   cursor: pointer;
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -22,7 +23,7 @@ body::-webkit-scrollbar-thumb {
   max-width: 1300px;
   margin: 0 auto;
   width: 100%;
-  padding: 12px;
+  padding: 0 12px;
 }
 
 .flex {
@@ -50,7 +51,7 @@ body::-webkit-scrollbar-thumb {
 
 .percentage {
   color: #fff;
-  font-size: 22px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -67,18 +68,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 70px;
   background-color: #0b2c48;
-  padding: 0 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.BigHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  z-index: 10;
 }
 
 .logo img {
@@ -197,7 +187,6 @@ body::-webkit-scrollbar-thumb {
 /* Footer */
 .footer {
   width: 100%;
-  height: 307px;
   background-color: #03243f;
   margin-top: 30px;
   padding-bottom: 20px;
@@ -250,7 +239,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .informations div {
-  width: 145px;
+  /* width: 145px; */
   padding-left: 20px;
 }
 
@@ -271,25 +260,14 @@ body::-webkit-scrollbar-thumb {
   font-weight: 400;
   text-align: left;
 }
-header {
-  display: none;
-}
 
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
-  .container {
-    max-width: 1200px;
-  }
-
   .circular-progress {
     margin-top: -30px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .container {
-    max-width: 992px;
-    width: 95%;
-  }
   .footer-contact {
     display: flex;
     width: 90%;
@@ -307,11 +285,6 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  .container {
-    max-width: 768px;
-    width: 90%;
-    padding: 10px;
-  }
   .footer-brand {
     display: none;
   }
@@ -344,12 +317,6 @@ header {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
-  .container {
-    max-width: 576px;
-    width: 85%;
-    padding: 8px;
-  }
-
   .footer-brand {
     display: none;
   }
@@ -386,11 +353,6 @@ header {
 }
 
 @media only screen and (max-width: 576px) {
-  .container {
-    max-width: 568px;
-    width: 75%;
-    padding: 6px;
-  }
   .footer-info {
     width: 100%;
     margin: 0 auto;
@@ -425,3 +387,5 @@ header {
     width: 100%;
   }
 }
+
+

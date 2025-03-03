@@ -5,6 +5,9 @@
     background-size: cover;
     background-position: center;
 }
+header{
+    display: none;
+}
 
 .information{
     display: flex;
@@ -34,7 +37,6 @@
 
 .year{
     color: rgba(255, 255, 255, 0.641);
-    font-weight: 400;
     margin-left: 10px;
 }
 .date{
@@ -129,7 +131,6 @@
 .info-treiler{
     padding-left: 20px;
     display: flex;
-    width: 250px;
     height: 20px;
     align-items: center;
     margin-top: 10px;
@@ -155,7 +156,6 @@
     margin-top: 5px;
 }
 
-
 .dot{
     margin: 0 5px 0 0; 
     width: 7px;
@@ -176,7 +176,7 @@
 }
 
 .status{
-    z-index: 10;
+    z-index: 9;
     margin-top: 25px;
     flex: .5;
     box-shadow: -40px 0px 19px 16px rgba(255, 255, 255, 0.779);
@@ -186,7 +186,6 @@
     display: flex;
     gap: 16px; 
     overflow-x: auto; 
-    scroll-behavior: smooth;
 }
 .actors-card::-webkit-scrollbar{
     height: 8px; 
@@ -201,7 +200,6 @@
     position: relative;
     margin: 0 4px 10px 0px;
     width: 140px;
-    height: 280px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
     border: 1px solid rgba(var(--lightGrey), 1);
     padding-bottom: 10px;
@@ -252,7 +250,6 @@
 
 .сети{
     display: flex;
-
 }
 
 .сети h2{
@@ -273,6 +270,10 @@
     border-bottom: 4px solid black;
 }
 
+.video_col.active{
+    border-bottom: 4px solid black;
+}
+
 .сети a span{
     align-items: center;
     opacity: .6;
@@ -280,19 +281,31 @@
 }
 
 #discuss{
-    height: 62px;
     display: flex;
-    width: 92%;
     border-radius: 10px;
     margin-bottom: 10px;
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 20px;
+    padding: 5px 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
 }
 
-#discuss a{
+#discuss img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#commentContent,
+#discussionContent {
+    display: none;
+}
+
+#commentContent.active,
+#discussionContent.active {
+    display: block;
+}
+
+#discussionContent a{
     font-size: 1em;
     color: #000;
     text-decoration: none;
@@ -300,15 +313,18 @@
     margin-left: 15px;
 }
 
-#discuss .data{
+.enter{
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#discussionContent .data{
     font-size: .95em;
     font-weight: 300;
     color: #0000009f;
     text-align: right;
-}
-
-.enter{
-    margin-left: 250px;
 }
 
 .videorolik{
@@ -340,13 +356,21 @@
     margin-left: 2px;
 }
 
-.popular-video{
+.popular-img{
     display: flex;
     overflow-x: scroll;
-    scroll-behavior: smooth;
 }
 .popular-video::-webkit-scrollbar{
     height: 8px; 
+}
+#img-1{
+    width: 470px;
+    height: 280px;
+}
+
+#img-2{
+    width: 250px;
+    height: 280px;
 }
 
 .popular-video::-webkit-scrollbar-thumb{
@@ -358,7 +382,6 @@
     width: 100%;
     display: flex;
     overflow-x: scroll;
-    scroll-behavior: smooth;
 }
 
 .recommend_movies::-webkit-scrollbar{
@@ -425,7 +448,6 @@
         font-size: 2rem;
     }
 }
-
 @media only screen and (max-width:992px){
     .status_media{
         font-size: 1.7rem;
@@ -457,7 +479,6 @@
         height: 120px;
     }
 }
-
 @media only screen and (max-width:860px){
     .paddingLeft{
         padding-left: 20px;
@@ -633,7 +654,6 @@
     }
     
 }
-
 @media only screen and (max-width:450px){
     .rolik{
         display: block;

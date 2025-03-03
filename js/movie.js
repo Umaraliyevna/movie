@@ -1,7 +1,7 @@
 const information = document.getElementById("information");
 const movieInfo = document.getElementById("movie-info");
 const actorsCard = document.getElementById("actors-card");
-const popularVideo = document.getElementById("popular-video");
+const popularImg = document.getElementById("popular-img");
 const recommendMovies = document.getElementById("recommend_movies");
 const statusInfo = document.getElementById("status_info");
 const keywords = document.getElementById("keywords");
@@ -102,7 +102,6 @@ function displayActorsCard() {
   fetch(url, options)
     .then((res) => res.json())
     .then((json) => {
-      console.log(json.cast);
       json.cast.forEach((actor) => {
         count++;
         if (count < 10) {
@@ -160,7 +159,6 @@ function displayActorsCard() {
 displayActorsCard();
 const comment = document.getElementById("comment");
 const discuss = document.getElementById("discussion");
-discuss.style.display = "none";
 
 var a = {
   comment: "discussion",
@@ -172,11 +170,19 @@ function socialMedia(selectedA, contentId) {
   const foundContent = document.getElementById(contentId + "Content");
   const foundOpposit = document.getElementById(a[contentId]);
   const foundOppositContent = document.getElementById(a[contentId] + "Content");
-  console.log(foundOpposit, foundContent);
-
   foundOpposit.classList.remove("active");
   foundOppositContent.classList.remove("active");
   foundContent.classList.add("active");
+}
+
+function popularParts(selectedPart, classname){
+  const videoParts = document.querySelectorAll(classname);
+  console.log(videoParts);
+  videoParts.forEach((video)=>{
+    video.classList.remove('active')
+  })
+
+  selectedPart.classList.add('active');
 }
 
 function displayPopularVideos() {
@@ -185,12 +191,12 @@ function displayPopularVideos() {
   fetch(url, options)
     .then((res) => res.json())
     .then((json) => {
-      json.backdrops.forEach((item) => {
-        popularVideo.innerHTML += `
-                    <img class='fame_video' src='${imgUrl}${item.file_path}'>
-                `;
-      });
-    })
+      console.log(json)
+        popularImg.innerHTML = `
+          <img id='img-1' class='fame_video' src='${imgUrl}${json.posters[0].file_path}'>
+          <img id='img-2' class='fame_video' src='${imgUrl}${json.posters[1].file_path}'>
+        `;
+      })      
     .catch((err) => console.error(err));
 }
 displayPopularVideos();
@@ -201,26 +207,25 @@ function displayRecommend() {
   fetch(url, options)
     .then((res) => res.json())
     .then((json) => {
-      console.log(json);
       json.results.forEach((movie) => {
         recommendMovies.innerHTML += `
                     <div class='recommend_card'>
-                        <img src='${imgUrl}${movie.backdrop_path}' alt='${
-          movie.original_title
-        }'>
-                        <div class="recommend_overflow">
-                          <div>
-                            <i class='bx bx-calendar'></i>
-                            <p class="recommend_date">${movie.release_date.replace(
-                              /-/g,
-                              "/"
-                            )}</p>
+                        <div>
+                          <div class="recommend_overflow">
+                            <div>
+                              <i class='bx bx-calendar'></i>
+                              <p class="recommend_date">${movie.release_date.replace(
+                                /-/g,
+                                "/"
+                              )}</p>
+                            </div>
+                            <div>
+                              <i class='bx bxs-star' ></i>
+                              <i class='bx bxs-heart' ></i>
+                              <i class='bx bxs-bookmark' ></i>
+                            </div>
                           </div>
-                          <div>
-                            <i class='bx bxs-star' ></i>
-                            <i class='bx bxs-heart' ></i>
-                            <i class='bx bxs-bookmark' ></i>
-                          </div>
+                          <img src='${imgUrl}${movie.backdrop_path}' alt='${movie.original_title}'>                          
                         </div>
                         <div class='recommend_name'>
                             <p>${movie.original_title}</p>
@@ -240,7 +245,6 @@ function displayStatus() {
   fetch(url1, options)
     .then((res) => res.json())
     .then((json) => {
-      console.log(json);
       statusInfo.innerHTML += `
             <div class='status_blok'>
                 <div>
@@ -270,7 +274,6 @@ function displayStatus() {
   fetch(url2, options)
     .then((res) => res.json())
     .then((json) => {
-      console.log(json);
       json.keywords.forEach((key) => {
         keywords.innerHTML += `
                 <button class='key_btn'>${key.name}</button>
@@ -281,19 +284,18 @@ function displayStatus() {
 }
 displayStatus();
 
-function displyVideo() {
-  const url3 = `${commonUrl}movie/${id}/videos?api_key=YOUR_API_KEY`;
-  fetch(url3)
-    .then((res) => res.json())
-    .then((json) => {
-      console.log(json);
-      json.results.forEach((movie) => {
-        rec_video.innerHTML += `
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/${movie.key}" frameborder="0" ></iframe>
-            `;
-      });
-    })
-    .catch((err) => console.error(err));
-}
+// function displyVideo() {
+//   const url3 = `${commonUrl}movie/${id}/videos?api_key=YOUR_API_KEY`;
+//   fetch(url3)
+//     .then((res) => res.json())
+//     .then((json) => {
+//       json.results.forEach((movie) => {
+//         rec_video.innerHTML += `
+//                 <iframe width="560" height="315" src="https://www.youtube.com/embed/${movie.key}" frameborder="0" ></iframe>
+//         `;
+//       });
+//     })
+//     .catch((err) => console.error(err));
+// }
 
-displyVideo();
+// displyVideo();

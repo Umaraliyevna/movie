@@ -17,6 +17,7 @@ const options = {
 };
 const imgUrl = 'https://media.themoviedb.org/t/p/w220_and_h330_face';
 
+
 function displayCard(listName) {
   const url = `${commonUrl}/trending/all/day?language=en-US`;
   fetch(url, options)
