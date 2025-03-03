@@ -19,6 +19,17 @@
             <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
           </div>
           <nav class="nav-menu">
+            <ul id="sidebar" class="sidebar">
+          <img
+            id="CloseIcon"
+            onclick="hideSidebar()"
+            src="/images/header-images/Close.svg"
+          />
+          <li><a href="#"></a>Фильмы</li>
+          <li><a href="#"></a>Сериалы</li>
+          <li><a href="#"></a>Люди</li>
+          <li><a href="#"></a>Ещё</li>
+        </ul>
             <ul>
               <li>
                 <a href="#" class="smoothScroll">Фильмы</a>
@@ -74,6 +85,12 @@
             <img src="images/header-images/searchIcon.svg" alt="Search" />
           </div>
         </div>
+      </div>
+       <img
+          id="MenuIcom"
+          onclick="showSidebar()"
+          src="/images/header-images/menuSvg.svg"
+        />
       </div>
 
     </header>
