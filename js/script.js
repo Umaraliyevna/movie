@@ -1,17 +1,17 @@
-const movieList = document.getElementById("movie-list");
-const videoList = document.getElementById("video-list");
-const videoCarusel = document.querySelector(".videos-carusel");
-const movieList2 = document.getElementById("movie-list-2");
-const textBtn = document.getElementById("text-none");
-textBtn.style.color = "#00254d";
+const movieList = document.getElementById('movie-list');
+const videoList = document.getElementById('video-list');
+const videoCarusel = document.querySelector('.videos-carusel');
+const movieList2 = document.getElementById('movie-list-2');
+const textBtn = document.getElementById('text-none');
+textBtn.style.color = '#00254d';
 
-const url = "https://api.themoviedb.org/3/trending/all/day?language=en-US";
+const url = 'https://api.themoviedb.org/3/trending/all/day?language=en-US';
 const options = {
-  method: "GET",
+  method: 'GET',
   headers: {
-    accept: "application/json",
+    accept: 'application/json',
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzFkYmRiNTcyM2RiNjk1MzEyZjYwZTJhYWJjZjJjZCIsIm5iZiI6MTczOTAxOTQyMi40Njg5OTk5LCJzdWIiOiI2N2E3NTQ5ZTVmYTQyZDdlNzZmMTEwMmYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ER1dWCes98jF_MVpkt-WMwCKPFe3A41DWqGy1NGQ6gs",
+      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzFkYmRiNTcyM2RiNjk1MzEyZjYwZTJhYWJjZjJjZCIsIm5iZiI6MTczOTAxOTQyMi40Njg5OTk5LCJzdWIiOiI2N2E3NTQ5ZTVmYTQyZDdlNzZmMTEwMmYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ER1dWCes98jF_MVpkt-WMwCKPFe3A41DWqGy1NGQ6gs',
   },
 };
 
@@ -26,8 +26,8 @@ function displayCard(listName) {
               <a href='movie.html?movie=${
                 movie.id
               }' style='text-decoration:none;'><img id='card-img' src='https://media.themoviedb.org/t/p/w220_and_h330_face${
-                movie.poster_path
-              }' alt="${movie.original_title}"></a>
+          movie.poster_path
+        }' alt="${movie.original_title}"></a>
               <div class="circular-progress">
                   <span class="percentage">${Math.floor(
                     movie.popularity
@@ -43,13 +43,13 @@ function displayCard(listName) {
 }
 displayCard(movieList);
 
-const url2 = "https://api.themoviedb.org/3/tv/popular?language=en-US&page=1";
+const url2 = 'https://api.themoviedb.org/3/tv/popular?language=en-US&page=1';
 const options2 = {
-  method: "GET",
+  method: 'GET',
   headers: {
-    accept: "application/json",
+    accept: 'application/json',
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzFkYmRiNTcyM2RiNjk1MzEyZjYwZTJhYWJjZjJjZCIsIm5iZiI6MTczOTAxOTQyMi40Njg5OTk5LCJzdWIiOiI2N2E3NTQ5ZTVmYTQyZDdlNzZmMTEwMmYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ER1dWCes98jF_MVpkt-WMwCKPFe3A41DWqGy1NGQ6gs",
+      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzFkYmRiNTcyM2RiNjk1MzEyZjYwZTJhYWJjZjJjZCIsIm5iZiI6MTczOTAxOTQyMi40Njg5OTk5LCJzdWIiOiI2N2E3NTQ5ZTVmYTQyZDdlNzZmMTEwMmYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ER1dWCes98jF_MVpkt-WMwCKPFe3A41DWqGy1NGQ6gs',
   },
 };
 
@@ -80,23 +80,23 @@ function displayCard2(listName) {
 displayCard2(movieList2);
 
 function changeBtn(selectedBtn, className) {
-  textBtn.style.color = "#a3f7bf";
+  textBtn.style.color = '#a3f7bf';
   const btns = document.querySelectorAll(`.${className}`);
   btns.forEach((button) => {
-    button.classList.remove("active");
+    button.classList.remove('active');
   });
 
-  selectedBtn.classList.add("active");
+  selectedBtn.classList.add('active');
 }
 
 const url3 =
-  "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
+  'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1';
 const options3 = {
-  method: "GET",
+  method: 'GET',
   headers: {
-    accept: "application/json",
+    accept: 'application/json',
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzFkYmRiNTcyM2RiNjk1MzEyZjYwZTJhYWJjZjJjZCIsIm5iZiI6MTczOTAxOTQyMi40Njg5OTk5LCJzdWIiOiI2N2E3NTQ5ZTVmYTQyZDdlNzZmMTEwMmYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ER1dWCes98jF_MVpkt-WMwCKPFe3A41DWqGy1NGQ6gs",
+      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzFkYmRiNTcyM2RiNjk1MzEyZjYwZTJhYWJjZjJjZCIsIm5iZiI6MTczOTAxOTQyMi40Njg5OTk5LCJzdWIiOiI2N2E3NTQ5ZTVmYTQyZDdlNzZmMTEwMmYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ER1dWCes98jF_MVpkt-WMwCKPFe3A41DWqGy1NGQ6gs',
   },
 };
 
@@ -123,14 +123,22 @@ function displayVideo() {
 displayVideo();
 
 function bigImg(x, url) {
-  x.style.transform = "scale(1.1)";
+  x.style.transform = 'scale(1.1)';
   videoCarusel.style.background = `url(${url})`;
-  videoCarusel.style.backgroundSize = "cover";
-  videoCarusel.style.backgroundPosition = "center";
+  videoCarusel.style.backgroundSize = 'cover';
+  videoCarusel.style.backgroundPosition = 'center';
 }
 
 function normalImg(x) {
-  x.style.transform = "scale(1)";
+  x.style.transform = 'scale(1)';
 }
-
-
+const sidebarMenu = document.getElementById('MenuIcom');
+const sidebar = document.getElementById('sidebar');
+function showSidebar() {
+  sidebarMenu.style.display = 'flex';
+  sidebar.style.display = 'flex';
+}
+function hideSidebar() {
+  sidebarMenu.style.display = 'flex';
+  sidebar.style.display = 'none';
+}

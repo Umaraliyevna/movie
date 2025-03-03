@@ -52,40 +52,32 @@ body {
 
 /* header */
 
-header {
-  margin-top: 0;
-  position: fixed;
+.header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  width: 97.4%;
+  width: 100%;
   height: 70px;
   background-color: #0b2c48;
   padding: 0 20px;
-  z-index: 10;
 }
+
 .logo img {
-  position: absolute;
-  left: 190px;
-  top: 25px;
   width: 160px;
   height: auto;
 }
-.nav-menu {
-  position: absolute;
-  top: 25px;
-  left: 370px;
-}
+
 .nav-menu ul {
   list-style: none;
   display: flex;
-  padding: 0 10px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-menu ul li {
-  position: relative;
   margin: 0 15px;
+  position: relative;
+  left: 20px;
 }
 
 .nav-menu ul li a {
@@ -93,14 +85,55 @@ header {
   color: white;
   font-weight: bold;
   font-size: 16px;
+  padding: 10px;
+  display: block;
+}
+
+.dropDown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  min-width: 180px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropDown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropDown ul li {
+  margin: 5px 0;
+}
+
+.dropDown ul li a {
+  color: black;
+  font-size: 14px;
+  display: block;
+  padding: 5px 10px;
+}
+
+.dropDown ul li a:hover {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+
+.nav-menu ul li:hover .dropDown {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .header-right {
   display: flex;
-  align-items: center;
-  position: absolute;
-  left: 900px;
-  top: 22px;
 }
 
 .header-right img {
@@ -109,216 +142,82 @@ header {
 }
 
 .switch-lang {
-  text-align: center;
   border: 2px solid white;
-  width: 24px;
-  height: 20px;
-  padding: 2px;
-
+  padding: 5px 10px;
   color: white;
   font-size: 14px;
   font-weight: bold;
-  margin-right: 15px;
   border-radius: 5px;
-  text-align: center;
+  cursor: pointer;
 }
+
 .switch-lang:hover {
   background-color: white;
   color: black;
   transition: all 0.3s;
 }
 
-.header-right ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.header-right ul li {
-  margin: 0 10px;
-}
-
-.header-right ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-.dropDown {
+/* Sidebar */
+.sidebar {
   display: none;
-  position: absolute;
-  width: 150px;
-  height: 200px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.nav-menu ul li:hover .dropDown {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-.dropDown ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  margin: 0px;
-  padding: 0;
-}
-
-.dropDown ul li {
-  margin: 0;
-  padding: 3px;
-  margin-bottom: 8px;
-}
-
-.dropDown ul li a {
-  font-size: 13px;
-  padding: 10px;
-  color: black;
-  display: block;
-}
-.dropDown1 {
-  display: none;
-  position: absolute;
-  width: 150px;
-  height: 200px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.nav-menu ul li:hover .dropDown1 {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-.dropDown1 ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  margin: 0px;
-  padding: 0;
-}
-
-.dropDown1 ul li {
-  margin: 0;
-  padding: 3px;
-  margin-bottom: 8px;
-}
-
-.dropDown1 ul li a {
-  font-size: 13px;
-  padding: 10px;
-  color: black;
-  display: block;
-}
-.dropDown2 {
-  display: none;
-  position: absolute;
-  width: 150px;
-  height: 45px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.nav-menu ul li:hover .dropDown2 {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-.dropDown2 ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  margin: 0px;
-  padding: 0;
-}
-
-.dropDown2 ul li {
-  margin: 0;
-  padding: 3px;
-  margin-bottom: 8px;
-}
-
-.dropDown2 ul li a {
-  font-size: 13px;
-  padding: 10px;
-  color: black;
-  display: block;
-}
-.dropDown3 {
-  display: none;
-  position: absolute;
-  width: 150px;
-  height: 200px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.nav-menu ul li:hover .dropDown3 {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-.dropDown3 ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  margin: 0px;
-  padding: 0;
-}
-
-.dropDown3 ul li {
-  margin: 0;
-  padding: 3px;
-  margin-bottom: 8px;
-}
-
-.dropDown3 ul li a {
-  font-size: 13px;
-  padding: 10px;
-  color: black;
-  display: block;
-}
-.search-box {
-  z-index: 10;
+  background-color: #03243f;
   position: fixed;
-  top: 70px;
-  display: inline-block;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  display: none;
+  z-index: 999;
+  font-size: 20px;
+}
+#sidebar {
+  display: none;
 }
 
-.search-icon {
-  position: absolute;
-  left: 190px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
+#MenuIcom {
+  z-index: -1;
 }
-
-.search-box input {
-  width: 1312px;
-  height: 30px;
-  padding: 8px 12px 8px 210px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  outline: none;
+#CloseIcon {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  margin-left: 180px;
 }
-
+.nav-menu .sidebar a {
+  color: white;
+  margin: 20px;
+  text-align: center;
+}
+#MenuIcom {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .nav-menu ul li {
+    display: none;
+  }
+  #MenuIcom {
+    width: 40px;
+    height: 40px;
+    display: block;
+    z-index: 1;
+  }
+  .switch-lang {
+    margin-top: 10px;
+  }
+  .nav-menu .sidebar li {
+    display: flex;
+    position: relative;
+    left: -20px;
+  }
+}
 /* Footer */
-.footer{
+.footer {
   width: 100%;
   height: 307px;
-  background-color: #03243F;
+  background-color: #03243f;
   margin-top: 30px;
 }
 
