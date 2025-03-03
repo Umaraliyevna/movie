@@ -40,14 +40,6 @@ header {
   font-size: 16px;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  left: 900px;
-  top: 22px;
-}
-
 .header-right img {
   width: 25px;
   margin: 0 10px;
@@ -59,7 +51,6 @@ header {
   width: 24px;
   height: 20px;
   padding: 2px;
-
   color: white;
   font-size: 14px;
   font-weight: bold;
@@ -487,7 +478,6 @@ header {
   margin-left: 20px;
 }
 
-
 /* banner */
 .banner {
   width: 100%;
@@ -557,14 +547,14 @@ header {
   padding-left: 20px;
 }
 
-.left{
+.left {
   margin-left: 10px;
 }
 .Peoples img {
   border-radius: 50%;
 }
 
-.listWriters{
+.listWriters {
   margin-left: 10px;
 }
 
@@ -572,11 +562,11 @@ header {
   font-size: 25px;
 }
 
-.BlueStick{
+.BlueStick {
   align-items: center;
 }
 
-.sticks{
+.sticks {
   margin: 15px 0 0 25px;
 }
 
@@ -588,12 +578,12 @@ header {
   margin-right: 5px;
 }
 
-.sticks p{
+.sticks p {
   margin: 5px;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
-.RedStick{
+.RedStick {
   align-items: center;
 }
 
@@ -610,16 +600,16 @@ header {
   margin-top: 15px;
 }
 
-.person img{
+.person img {
   width: 60px;
   height: 60px;
 }
 
-.person-rate{
+.person-rate {
   margin-left: 15px;
 }
 
-.person_name{
+.person_name {
   font-weight: 600;
   font-size: 1.2em;
   margin: 0;
@@ -633,9 +623,9 @@ header {
   align-items: center;
 }
 
-.greenOne p{
+.greenOne p {
   margin: 0;
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: bold;
 }
 
@@ -644,25 +634,25 @@ header {
   align-items: center;
 }
 
-.redOne p{
+.redOne p {
   margin: 0;
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: bold;
 }
 
-.person_Green{
+.person_Green {
   width: calc(var(--value) * 0.0024px);
   height: 7px;
   border-radius: 20px;
-  background-image: linear-gradient(to right,#BDFDCE, #25D7AB);
+  background-image: linear-gradient(to right, #bdfdce, #25d7ab);
   margin: 0;
 }
 
-.person_Red{
+.person_Red {
   width: calc(var(--value) * 0.032px);
   height: 7px;
   border-radius: 20px;
-  background-image: linear-gradient(to right,#FDC070, #DA3E63);
+  background-image: linear-gradient(to right, #fdc070, #da3e63);
 }
 
 

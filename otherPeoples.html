@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/otherPeoples.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="images/header-images/TMDB logo.svg" alt="TMDB Logo" />
+      </div>
+
+      <nav class="nav-menu">
+        <ul id="sidebar" class="sidebar">
+          <img
+            id="CloseIcon"
+            onclick="hideSidebar()"
+            src="/images/header-images/Close.svg"
+          />
+          <li><a href="#"></a>Фильмы</li>
+          <li><a href="#"></a>Сериалы</li>
+          <li><a href="#"></a>Люди</li>
+          <li><a href="#"></a>Ещё</li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Фильмы</a>
+            <div class="dropDown">
+              <ul>
+                <li><a href="#">Популярные</a></li>
+                <li><a href="#">Смотрят сейчас</a></li>
+                <li><a href="#">Ожидаемые</a></li>
+                <li><a href="#">Лучшие</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Сериалы</a>
+            <div class="dropDown">
+              <ul>
+                <li><a href="#">Популярные</a></li>
+                <li><a href="#">Смотрят сейчас</a></li>
+                <li><a href="#">Ожидаемые</a></li>
+                <li><a href="#">Лучшие</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Люди</a>
+            <div class="dropDown">
+              <ul>
+                <li><a href="#">Популярные Люди</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Ещё</a>
+            <div class="dropDown">
+              <ul>
+                <li><a href="#">Обсуждения</a></li>
+                <li><a href="#">Доска почёта</a></li>
+                <li><a href="#">Поддержка</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="switch-lang">RU</div>
+        <img src="images/header-images/searchIcon.svg" alt="Search" />
+
+        <img
+          id="MenuIcom"
+          onclick="showSidebar()"
+          src="/images/header-images/menuSvg.svg"
+        />
+      </div>
+    </header>
+    <div class="container">
+      <div class="AllActors">
+        <div id="ActorsCast">
+          <h3>Series Cast 14</h3>
+        </div>
+        <div id="ActorsCrew">
+          <h3>Series Crew 999</h3>
+        </div>
+      </div>
+    </div>
+    <script src="js/otherPeoples.js"></script>
+  </body>
+</html>

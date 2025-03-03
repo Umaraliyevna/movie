@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#ActorsCast {
+  flex-direction: column;
+  width: 400px;
+  height: 800px;
+}
+.EachActors {
+  margin: -10px;
+  width: 300px;
+  height: 100px;
+  display: flex;
+}
+
+.actorImg img {
+  display: flex;
+  border-radius: 20%;
+  width: 60px;
+  height: 60px;
+}
+.AllActors {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  width: 1300px;
+  height: auto;
+}
+
+.ActorInfo {
+  margin-left: 10px;
+}
+/* Crew */
+
+.CrewActors {
+  margin: 0px;
+  width: 300px;
+  height: 100px;
+}
+.CrewActors {
+  margin: -10px;
+  width: 300px;
+  height: 100px;
+}
+#ActorsCrew {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.CrewImg img {
+  border-radius: 20%;
+  width: 60px;
+  height: 60px;
+}
+.CrewInfo {
+  margin-left: 80px;
+}
+.BigSidebar {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+}
